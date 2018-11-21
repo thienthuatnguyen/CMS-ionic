@@ -1,0 +1,108 @@
+@import "../../assets/css/_variables";
+
+page-splash {
+
+    .content-ios:not([no-bounce]), .content-md:not([no-bounce]) {
+        > .scroll-content {
+            &:after { position: absolute; top: initial; right: 20px; bottom: 35px; width: 120px; height: 30px; content: url('../assets/img/Hyundai-logo.svg'); }
+            &:before { position: fixed; left:0; top:0; right: 0; bottom: 0; width: auto; height: auto; content: ""; background: url('../assets/img/login-stg-m1.jpg') no-repeat center; background-size: cover; opacity: 1;}
+            @media (orientation:landscape) {
+                &:after { content: ""; }
+            }
+        }
+    }
+    .scroll-content {
+        display: flex;
+        background-color: $color-hd-lightsand;
+    }
+
+    .grid { background: url('../assets/img/splash-stg-m2.png') no-repeat center; background-size: cover; background-color: rgba(255,255,255,.7);
+        margin-left: 20px; margin-right: 20px; margin-bottom: 70px; padding: 0 15px 30px; z-index: 1;
+        h1 { font-family: $font-head-m; font-size: 2.8rem; margin-bottom: 2rem; }
+        h2 { font-family: $font-head-r; font-size: 2.4rem; }
+        .row { flex: 1;
+            &:nth-child(1) { padding-top: 60px; max-height: 260px; height: 40%; align-items: center; align-content: center; }
+            &:nth-child(2) {height: 30%;}
+            &:nth-child(3) { flex: 0 0 auto; }
+        }
+        @media (orientation:landscape) {
+            margin-bottom: 15px;
+            .row {
+                &:nth-child(1) { padding-top: 30px; }
+            }
+        }
+    }
+
+}
+
+/*
+.ios, .md {
+
+  page-splash {
+
+    .scroll-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #bars {
+      height: 80%;
+
+      .cls-1 {
+        opacity: 0;
+        transform: rotate3d(1, 1, 0, 50deg);
+        animation: 1s 0.2s ease fadeInAndSpin;
+        animation-fill-mode: forwards;
+      }
+
+      .cls-2 {
+        opacity: 0;
+        transform: rotate3d(1, 1, 0, 50deg);
+        animation: 1s 0.4s ease fadeInAndSpin;
+        animation-fill-mode: forwards;
+      }
+
+      .cls-3 {
+        opacity: 0;
+        transform: rotate3d(1, 1, 0, 50deg);
+        animation: 1s 0.6s ease fadeInAndSpin;
+        animation-fill-mode: forwards;
+      }
+
+      .cls-4 {
+        opacity: 0;
+        transform: rotate3d(1, 1, 0, 50deg);
+        animation: 1s 0.8s ease fadeInAndSpin;
+        animation-fill-mode: forwards;
+      }
+
+      .cls-5, .cls-6 {
+        opacity: 0;
+        animation: 2s 1.5s linear fadeIn;
+        animation-fill-mode: forwards;
+      }
+
+    }
+
+  }
+
+}
+
+@keyframes fadeInAndSpin {
+
+  100% {
+    opacity: 1;
+    transform: rotate3d(1, 1, 0, 0deg);
+  }
+
+}
+
+@keyframes fadeIn {
+
+  100% {
+    opacity: 1;
+  }
+
+}
+*/

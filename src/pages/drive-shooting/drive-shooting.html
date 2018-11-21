@@ -1,0 +1,47 @@
+<ion-content padding>
+  <div *ngIf="pageType == 'odometer'">
+    <p class="title" text-center>
+      {{ 'drive_shooting.total_mileage' | translate }}
+    </p>
+    <p class="title" text-center>
+      {{ 'drive_shooting.highlight_and_shoot' | translate }}
+    </p>
+  </div>
+  <div *ngIf="pageType == 'front'">
+      <p class="title" text-center>
+        {{ 'drive_shooting.please_take_a_picture_of_the_front_of_the_vehicle' | translate }}
+      </p>
+      <p text-center>
+        {{ 'drive_shooting.please_make_sure_the_license_plate_is_clearly_visible' | translate }}
+      </p>
+  </div>
+  <div *ngIf="pageType == 'back'">
+      <p class="title" text-center>
+        {{ 'drive_shooting.please_take_a_picture_of_the_side_of_the_vehicle' | translate }}
+      </p>
+      <p text-center>
+        {{ 'drive_shooting.please_take_a_picture_so_that_the_decal_looks_good' | translate }}
+      </p>
+  </div>
+  <ion-grid text-center class="profile-Picture">
+    <ion-row align-items-center justify-content-center>
+        <div *ngIf="pageType == 'odometer'">
+            <img src="assets/img/dashboard-view.svg">
+        </div>
+        <div *ngIf="pageType == 'front'">
+            <img src="assets/img/front-view.svg">
+        </div>
+        <div *ngIf="pageType == 'back'">
+            <img src="assets/img/side-view.svg">
+        </div>
+        <p>"{{ 'drive_shooting.should_take_a_photo_with_landscape_mode' | translate }}"</p>
+      </ion-row>
+      <ion-grid class="default-button-group">
+        <ion-row>
+          <ion-col>
+            <button ion-button full (click)="takePicture()">Begin shooting</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-grid>
+</ion-content>

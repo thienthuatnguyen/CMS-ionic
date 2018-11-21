@@ -1,0 +1,32 @@
+<ion-header [ngClass]="{'hideButtonBack' : disableBack == true}">
+    <ion-navbar class="head-nav-bar">
+        <ion-title class="header-title">{{ 'survey_detail.title' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="survey-vote">
+    <ion-list>
+        <ion-list-header color="light">
+            <span>{{ 'survey.customer' | translate }}</span>&nbsp;
+            <span>{{customerName}}</span>
+        </ion-list-header>
+        <ion-item *ngFor="let question of questions">
+            <p>{{question.title}}</p>
+            <span item-end>
+                <rating [(ngModel)]="question.response.selectedScore" readOnly="false" [max]="question.maxScore" emptyStarIconName="ios-star-outline"
+                    halfStarIconName="star-half" starIconName="ios-star" nullable="false">
+                </rating>
+            </span>
+
+        </ion-item>
+    </ion-list>
+    <ion-grid class="default-button-group">
+        <ion-row>
+            <ion-col>
+                <button ion-button full color="light" (click)="cancel()">{{ 'CANCEL_BUTTON' | translate }}</button>
+            </ion-col>
+            <ion-col>
+                <button  [disabled]="!allQuestionAreAnswer()" ion-button full (click)="save()">{{ 'SAVE_BUTTON' | translate }}</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

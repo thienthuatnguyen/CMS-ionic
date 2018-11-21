@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-navbar class="head-nav-bar">
+    <ion-title class="header-title">{{ 'VEHICLE_HEALTH_CHECK_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="submitSave(form)" validate>
+  <ion-item>
+    <ion-label stacked>{{ 'TEST_VEHICLE_SELECT' | translate }}</ion-label>
+    <ion-select [disabled]="vehicleIdFromReservation" name="vhclist" cancelText="{{ 'CANCEL_BUTTON' | translate }}" okText="{{ 'OK_BUTTON' | translate }}" required placeholder="{{ 'SELECT_A_VEHICLE' | translate }}" [(ngModel)]="vhc.id"  (ngModelChange)="loadVHCItem(vhc.id)">
+      <ion-option *ngFor="let item of vehicleList" value="{{item.id}}">{{item.vehicleType.name}} ({{item.plateNo}})&#x200E;</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <div class="bodyBackground" id="checkDamageArea" style="margin: 0 auto; position: relative;">
+      <img src="assets/img/vhcBody.png" style="width: 100%; height: auto;" #markArea>
+      <ion-icon class="damage-icon" name="ios-checkmark" *ngFor="let item of checkDamageScalable" [ngStyle]="{'top': item.position.YVal + 'px', 'left': item.position.XVal  + 'px', 'font-size': fontSize + 'px'}"
+        style="position: absolute; font-size: 35px;"></ion-icon>
+    </div>
+  </ion-item>
+  <ion-grid>
+      <ion-row>
+          <ion-col>
+              <span>{{ 'vehicle_health_check.upload_photos' | translate }}</span>
+              <span class="box-point">{{Pictures.length}}</span>
+            </ion-col>
+            <ion-col  text-end class="camera-col">
+              <button  type="button" class="camera-button" [disabled]="!vhc.id" ion-button clear (click)="takePhoto()">
+                <ion-icon name="icon_camera"></ion-icon>
+              </button>
+            </ion-col>
+           
+      </ion-row>
+      <ion-row>
+        <ion-col *ngIf="Pictures.length > 0">
+          <ion-slides pager slidesPerView="3" dir="{{direction}}">
+              <ion-slide *ngFor="let item of Pictures" (click) = "showImageModal(item)">
+                  <img [src]= "domSanitizer.bypassSecurityTrustUrl(item.url)"/>
+              </ion-slide>
+          </ion-slides>
+        </ion-col>
+        <ion-col no-padding class="col-card" *ngIf="Pictures.length ==0">
+          <ion-card class="card-no-style" text-center>
+            <ion-card-content>
+              <p>{{ 'msg.there_are_no_pictures' | translate}}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+  <ion-grid class="comment">
+    <ion-row>
+      <ion-col>
+        <ion-label stacked>{{ 'COMMENT' | translate }}</ion-label>
+      </ion-col> 
+    </ion-row>
+    <ion-row>
+      <ion-textarea  required name="comment" [(ngModel)]="vhc.comment" placeholder=""></ion-textarea>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="default-button-group">
+    <ion-row>
+      <ion-col>
+        <button type="button" ion-button full color="light" (click)="cancel()">{{ 'CANCEL_BUTTON' | translate }}</button>
+      </ion-col>
+      <ion-col>
+        <button type="submit" [disabled]="!form.valid" ion-button full >{{ 'SAVE_BUTTON' | translate }}</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="check-list">
+    <ion-list>
+      <ion-list-header>
+        <ion-row>
+
+          <ion-col col-4>
+              {{ 'CHECK_DATE' | translate }}
+          </ion-col>
+          <ion-col col-8>
+              {{ 'SALES_CONSULTANT' | translate }}
+          </ion-col>
+        </ion-row>
+      </ion-list-header>
+      <!--      <ion-row ion-list-header>
+              <ion-col>
+                Check Date
+              </ion-col>
+              <ion-col>
+                Sales Consultant
+              </ion-col>
+            </ion-row>-->
+      <ion-item *ngFor="let item of history">
+        <ion-row (click)="historyDetail(item)">
+          <ion-col col-4>
+            <p>{{item.creationTime | date: displayDateFormat}}</p>
+          </ion-col>
+          <ion-col col-7>
+            <p>{{item.creatorUserName}}</p>
+          </ion-col>
+          <ion-col col-1 text-right>
+            <ion-icon name="md-arrow-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+
+    </ion-list>
+  </ion-grid>
+  </form>
+</ion-content>

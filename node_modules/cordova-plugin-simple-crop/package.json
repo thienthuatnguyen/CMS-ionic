@@ -1,0 +1,56 @@
+{
+  "_from": "cordova-plugin-simple-crop@0.0.1",
+  "_id": "cordova-plugin-simple-crop@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-qiSX1V6V5NkIrouPzfh0mv+KsPUJbA/3tp8oVfpVAP6+a/CkQxp0CF1AsqGhpSxf50luSaEYbsRtHlg2IInjig==",
+  "_location": "/cordova-plugin-simple-crop",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-simple-crop@0.0.1",
+    "name": "cordova-plugin-simple-crop",
+    "escapedName": "cordova-plugin-simple-crop",
+    "rawSpec": "0.0.1",
+    "saveSpec": null,
+    "fetchSpec": "0.0.1"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-simple-crop/-/cordova-plugin-simple-crop-0.0.1.tgz",
+  "_shasum": "cbaffd1eedb32fc128af20085abe3663f74ff40b",
+  "_spec": "cordova-plugin-simple-crop@0.0.1",
+  "_where": "/Users/mac/Documents/cordova/smarttestdrive",
+  "bugs": {
+    "url": "https://github.com/htqbuu/cordova-plugin-simple-crop/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-simple-crop",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Crop an image in a Cordova app with ratio",
+  "homepage": "https://github.com/htqbuu/cordova-plugin-simple-crop#readme",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "image",
+    "image manipulation",
+    "crop"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-simple-crop",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htqbuu/cordova-plugin-simple-crop.git"
+  },
+  "version": "0.0.1"
+}

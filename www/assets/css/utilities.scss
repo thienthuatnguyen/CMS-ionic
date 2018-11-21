@@ -1,0 +1,157 @@
+//
+// Utility classes
+// --------------------------------------------------
+// size
+@mixin circle ($value) { width: $value; height: $value; -webkit-border-radius:($value/2); border-radius:($value/2); }
+@mixin round($radius:$border-radius-default) {
+  border-radius: $radius;
+}
+@mixin size ($width:100%, $height:100%) {
+  width: $width; height: $height;
+}
+@mixin border-box ($color:$color-border-basic, $weight:1px, $type:solid) {
+  border: $color $weight $type;
+}
+
+//position
+@mixin position-fix ($top:0px, $right:0px, $bottom:0px, $left:0px) {
+  position: fixed; top:$top; right: $right; bottom: $bottom; left: $left;
+}
+@mixin position-full ($top:0px, $right:0px, $bottom:0px, $left:0px) {
+  position: absolute; top:$top; right: $right; bottom: $bottom; left: $left;
+}
+@mixin left-top ($left:0px, $top:0px) {
+  position: absolute; left: $left; top:$top;
+}
+@mixin right-top ($right:0px, $top:0px) {
+  position: absolute; right: $right; top:$top;
+}
+@mixin left-bottom ($left:0px, $bottom:0px) {
+  position: absolute; left: $left; bottom:$bottom;
+}
+@mixin right-bottom ($right:0px, $bottom:0px) {
+  position: absolute; right: $right; bottom:$bottom;
+}
+
+//line
+@mixin underline ($weight:1px, $type:solid, $color:$color-hd-sand) {
+  border-bottom:$weight $type $color;
+}
+
+// shadows
+@mixin box-shadow ($depth: 10px, $opacity: 0.5, $x: 0, $y: $x) {
+  box-shadow: $x $y $depth rgba(0,0,0, $opacity);
+}
+@mixin text-shadow ($x: 0, $y: $x, $depth: 5px, $scolor: $kkk, $color: $fff) {
+  text-shadow: $x $y $depth $scolor; color: $color;
+}
+@mixin background ($url, $repeat: no-repeat, $x: center, $y: center) {
+  background: url($url) $repeat $x $y;
+}
+
+// transform
+@mixin transform ($x: 50%, $y: $x) {
+  position: absolute; left: $x; top: $y;
+  -webkit-transform: translate(-($x), -($y));
+  -ms-transform: translate(-($x), -($y));
+  transform: translate(-($x), -($y));
+}
+@mixin transformX ($x: 50%) {
+  position: absolute; left: $x;
+  -webkit-transform: translateX(-($x));
+  -ms-transform: translateX(-($x));
+  transform: translateX(-($x));
+}
+@mixin transformY ($y: 50%) {
+  position: absolute; top: $y;
+  -webkit-transform: translateY(-($y));
+  -ms-transform: translateY(-($y));
+  transform: translateY(-($y));
+}
+@mixin transformWithScale ($x: 50%, $y: $x, $scale:1) {
+  position: absolute; left: $x; top: $y;
+  -webkit-transform: translate(-($x), -($y)) scale($scale);
+  -ms-transform: translate(-($x), -($y)) scale($scale);
+  transform: translate(-($x), -($y)) scale($scale);
+}
+
+// transition
+@mixin transition ($target: all, $duration: 1s, $delay: 0s ) {
+  -webkit-transition: $target $duration ease;
+  -ms-transition: $target $duration ease;
+  transition: $target $duration ease;
+  -webkit-transition-delay: $delay;
+  -ms-transition-delay: $delay;
+  transition-delay: $delay;
+
+}
+@mixin animations ($ani_function: fadeIn, $ani_time: 0.5s, $ani_keep: forwards, $ani_delay: 0s) {
+  -webkit-animation: $ani_function $ani_time $ani_keep;
+  -ms-animation: $ani_function $ani_time $ani_keep;
+  animation: $ani_function $ani_time $ani_keep;
+  -webkit-animation-delay: $ani_delay;
+  -ms-animation-delay: $ani_delay;
+  animation-delay: $ani_delay;
+}
+
+// Floats
+// -------------------------
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Deprecated as of v3.0.1 (will be removed in v4)
+@mixin hide-text() {
+  font-size: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+// New mixin to use as of v3.0.1
+
+@mixin text-hide-inline() {
+  font-size: 0;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 0;
+}
+
+@mixin sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@mixin hidden() {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+// Text overflow
+// Requires inline-block or block for proper styling
+
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

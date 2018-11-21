@@ -1,0 +1,33 @@
+
+<ion-header class="header-popup">
+            <button class="btn-close-popup" ion-button (click)="dismiss()">
+                <ion-icon name="md-close"></ion-icon>
+            </button>
+        <ion-item no-lines class="info" no-padding>
+                <span class="date">{{history.creationTime| date: displayDateFormat}}</span>
+                <ion-icon name="person"></ion-icon>
+                <span class="name">{{history.creatorUserName}}</span>
+        </ion-item>
+</ion-header>
+<ion-content>
+    <div class="content-popup">
+        <div class="no-image" *ngIf= " !Pictures.length"></div>
+        <div class="wrapper-slider" *ngIf= "Pictures.length">
+            <ion-slides pager="false" slidesPerView="1"  dir="{{direction}}">
+                    <ion-slide *ngFor="let item of Pictures">
+                        <img [src]="domSanitizer.bypassSecurityTrustUrl(item.url)" class="popup-vehicle-img" />
+                    </ion-slide>
+            </ion-slides>
+            <button class="btn-slider next-slider" (click)="next()"> 
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+            <button class="btn-slider prev-slider" (click) = "prev()">  
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </div>
+    <div class="comment"  text-left>
+            <ion-textarea readonly  rows= "4" [(ngModel)] = "history.comment" >
+            </ion-textarea>    
+    </div>
+    </div>
+</ion-content>

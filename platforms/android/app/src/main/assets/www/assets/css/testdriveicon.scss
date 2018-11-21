@@ -1,0 +1,137 @@
+$testdriveicon-path: "../assets/testdriveicon";
+
+@font-face {
+	font-family: "sampleIcon";
+	src: url("#{$testdriveicon-path}/testdrive.woff") format("woff");
+}
+
+//.icon_sample li { padding:10px; border-bottom:1px solid #dddddd; list-style: none; }
+//.icon_sample li:before { margin-right: 30px; }
+@mixin icon_h() { font-family:'sampleIcon'; font-size:24px; font-style: normal; }
+
+.icon_hyundai, .ion-ios-icon_hyundai, .ion-ios-icon_hyundai-outline, .ion-md-icon_hyundai, .ion-md-icon_hyundai-outline {
+	&:before { @include icon_h(); content:'\0030'; }
+}
+.icon_location, .ion-ios-icon_location, .ion-ios-icon_location-outline, .ion-md-icon_location, .ion-md-icon_location-outline { 
+	&:before { @include icon_h(); content:'\0031'; }
+}
+.icon_bell, .ion-ios-icon_bell, .ion-ios-icon_bell-outline, .ion-md-icon_bell, .ion-md-icon_bell-outline { 
+	&:before { @include icon_h(); content:'\0032'; }
+}
+.icon_bluetooth, .ion-ios-icon_bluetooth, .ion-ios-icon_bluetooth-outline, .ion-md-icon_bluetooth, .ion-md-icon_bluetooth-outline { 
+	&:before { @include icon_h(); content:'\0033'; }
+}
+.icon_book, .ion-ios-icon_book, .ion-ios-icon_book-outline, .ion-md-icon_book, .ion-md-icon_book-outline { 
+	&:before { @include icon_h(); content:'\0034'; }
+}
+.icon_checklist, .ion-ios-icon_checklist, .ion-ios-icon_checklist-outline, .ion-md-icon_checklist, .ion-md-icon_checklist-outline { 
+	&:before { @include icon_h(); content:'\0035'; }
+}
+.icon_camera, .ion-ios-icon_camera, .ion-ios-icon_camera-outline, .ion-md-icon_camera, .ion-md-icon_camera-outline { 
+	&:before { @include icon_h(); content:'\0037'; }
+}
+.icon_calendar, .ion-ios-icon_calendar, .ion-ios-icon_calendar-outline, .ion-md-icon_calendar, .ion-md-icon_calendar-outline { 
+	&:before { @include icon_h(); content:'\0041'; }
+}
+.icon_cal_check, .ion-ios-icon_cal_check, .ion-ios-icon_cal_check-outline, .ion-md-icon_cal_check-outline, .ion-md-icon_cal_check-outline { 
+	&:before { @include icon_h(); content:'\0042'; }
+}
+.icon_cal_checklist, .ion-ios-icon_cal_checklist, .ion-ios-icon_cal_checklist-outline, .ion-md-icon_cal_checklist, .ion-md-icon_cal_checklist-outline { 
+	&:before { @include icon_h(); content:'\0043'; }
+}
+.icon_check, .ion-ios-icon_check, .ion-ios-icon_check-outline, .ion-md-icon_check, .ion-md-icon_check-outline { 
+	&:before { @include icon_h(); content:'\0044'; }
+}
+.icon_clock, .ion-ios-icon_clock, .ion-ios-icon_clock-outline, .ion-md-icon_clock, .ion-md-icon_clock-outline { 
+	&:before { @include icon_h(); content:'\0045'; }
+}
+.icon_close, .ion-ios-icon_close, .ion-ios-icon_close-outline, .ion-md-icon_close, .ion-md-icon_close-outline { 
+	&:before { @include icon_h(); content:'\0046'; }
+}
+.icon_gear, .ion-ios-icon_gear, .ion-ios-icon_gear-outline, .ion-md-icon_gear, .ion-md-icon_gear-outline { 
+	&:before { @include icon_h(); content:'\0047'; }
+}
+.icon_guage, .ion-ios-icon_guage, .ion-ios-icon_guage-outline, .ion-md-icon_guage, .ion-md-icon_guage-outline { 
+	&:before { @include icon_h(); content:'\0048'; }
+}
+.icon_home, .ion-ios-icon_home, .ion-ios-icon_home-outline, .ion-md-icon_home, .ion-md-icon_home-outline { 
+	&:before { @include icon_h(); content:'\0049'; }
+}
+.icon_cal_dublecheck, .ion-ios-icon_cal_dublecheck, .ion-ios-icon_cal_dublecheck-outline, .ion-md-icon_cal_dublecheck, .ion-md-icon_cal_dublecheck-outline { 
+	&:before { @include icon_h(); content:'\004A'; }
+}
+.icon_magnifier, .ion-ios-icon_magnifier, .ion-ios-icon_magnifier-outline, .ion-md-icon_magnifier, .ion-md-icon_magnifier-outline { 
+	&:before { @include icon_h(); content:'\004B'; }
+}
+.icon_man, .ion-ios-icon_man, .ion-ios-icon_man-outline, .ion-md-icon_man, .ion-md-icon_man-outline { 
+	&:before { @include icon_h(); content:'\004C'; }
+}
+.icon_manblock, .ion-ios-icon_manblock, .ion-ios-icon_manblock-outline, .ion-md-icon_manblock, .ion-md-icon_manblock-outline { 
+	&:before { @include icon_h(); content:'\004D'; }
+}
+.icon_memo, .ion-ios-icon_memo, .ion-ios-icon_memo-outline, .ion-md-icon_memo, .ion-md-icon_memo-outline { 
+	&:before { @include icon_h(); content:'\004E'; }
+}
+.icon_menu, .ion-ios-icon_menu, .ion-ios-icon_menu-outline, .ion-md-icon_menu, .ion-md-icon_menu-outline { 
+	&:before { @include icon_h(); content:'\004F'; }
+}
+.icon_menuzig, .ion-ios-icon_menuzig, .ion-ios-icon_menuzig-outline, .ion-md-icon_menuzig, .ion-md-icon_menuzig-outline { 
+	&:before { @include icon_h(); content:'\0050'; }
+}
+.icon_people, .ion-ios-icon_people, .ion-ios-icon_people-outline, .ion-md-icon_people, .ion-md-icon_people-outline { 
+	&:before { @include icon_h(); content:'\0051'; }
+}
+.icon_plus, .ion-ios-icon_plus, .ion-ios-icon_plus-outline, .ion-md-icon_plus, .ion-md-icon_plus-outline { 
+	&:before { @include icon_h(); content:'\0053'; }
+}
+.icon_rotate, .ion-ios-icon_rotate, .ion-ios-icon_rotate-outline, .ion-md-icon_rotate, .ion-md-icon_rotate-outline { 
+	&:before { @include icon_h(); content:'\0054'; }
+}
+.icon_starblock, .ion-ios-icon_starblock, .ion-ios-icon_starblock-outline, .ion-md-icon_starblock, .ion-md-icon_starblock-outline { 
+	&:before { @include icon_h(); content:'\0055'; }
+}
+.icon_star, .ion-ios-icon_star, .ion-ios-icon_star-outline, .ion-md-icon_star, .ion-md-icon_star-outline { 
+	&:before { @include icon_h(); content:'\0056'; }
+}
+.icon_car, .ion-ios-icon_car, .ion-ios-icon_car-outline, .ion-md-icon_car, .ion-md-icon_car-outline { 
+	&:before { @include icon_h(); content:'\0057'; }
+}
+.icon_carplus, .ion-ios-icon_carplus, .ion-ios-icon_carplus-outline, .ion-md-icon_carplus, .ion-md-icon_carplus-outline { 
+	&:before { @include icon_h(); content:'\0058'; }
+}
+.icon_carsearch, .ion-ios-icon_carsearch, .ion-ios-icon_carsearch-outline, .ion-md-icon_carsearch, .ion-md-icon_carsearch-outline { 
+	&:before { @include icon_h(); content:'\0059'; }
+}
+.icon_left, .ion-ios-icon_left, .ion-ios-icon_left-outline, .ion-md-icon_left, .ion-md-icon_left-outline { 
+	&:before { @include icon_h(); content:'\005A' }
+}
+.icon_arrow, .ion-ios-icon_arrow, .ion-ios-icon_arrow-outline, .ion-md-icon_arrow, .ion-md-icon_arrow-outline { 
+	&:before { @include icon_h(); content:'\005B'; }
+}
+.icon_checkblock, .ion-ios-icon_checkblock, .ion-ios-icon_checkblock-outline, .ion-md-icon_checkblock, .ion-md-icon_checkblock-outline { 
+	&:before { @include icon_h(); content:'\005E'; }
+}
+.icon_roundleft, .ion-ios-icon_roundleft, .ion-ios-icon_roundleft-outline, .ion-md-icon_roundleft, .ion-md-icon_roundleft-outline { 
+	&:before { @include icon_h(); content:'\003C'; }
+}
+.icon_roundright, .ion-ios-icon_roundright, .ion-ios-icon_roundright-outline, .ion-md-icon_roundright, .ion-md-icon_roundright-outline { 
+	&:before { @include icon_h(); content:'\003E'; }
+}
+.icon_play, .ion-ios-icon_play, .ion-ios-icon_play-outline, .ion-md-icon_play, .ion-md-icon_play-outline { 
+	&:before { @include icon_h(); content:'\0040'; }
+}
+.icon_survey, .ion-ios-icon_survey, .ion-ios-icon_survey-outline, .ion-md-icon_survey, .ion-md-icon_survey-outline { 
+	&:before { @include icon_h(); content:'\0061'; }
+}
+.icon_setting, .ion-ios-icon_setting, .ion-ios-icon_setting-outline, .ion-md-icon_setting, .ion-md-icon_setting-outline { 
+	&:before { @include icon_h(); content:'\007E'; }
+}
+.icon_vehicle_list, .ion-ios-icon_vehicle_list, .ion-ios-icon_vehicle_list-outline, .ion-md-icon_vehicle_list, .ion-md-icon_vehicle_list-outline { 
+	&:before { @include icon_h(); content:'\007F'; }
+}
+.icon_smile, .ion-ios-icon_smile, .ion-ios-icon_smile-outline, .ion-md-icon_smile, .ion-md-icon_smile-outline { 
+	&:before { @include icon_h(); content:'\0016'; }
+}
+.icon_logout, .ion-ios-icon_logout, .ion-ios-icon_logout-outline, .ion-md-icon_logout, .ion-md-icon_logout-outline { 
+	&:before { @include icon_h(); content:'\0017'; }
+}

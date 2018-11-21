@@ -1,0 +1,102 @@
+@import "../../assets/css/_variables";
+
+page-login {
+    .text-input-ios {
+        margin: 11px 8px 11px 8px !important;
+    }
+    .list .item .item-inner {
+        padding-left: 0 !important;
+    }
+      
+    .content-ios:not([no-bounce]), .content-md:not([no-bounce]) {
+        > .scroll-content {
+            &:after { position: absolute; top: initial; right: 20px; bottom: 35px; width: 120px; height: 30px; content: url('../assets/img/Hyundai-logo.svg'); }
+            &:before { position: fixed; left:0; top:0; right: 0; bottom: 0; width: auto; height: auto; content: ""; background: url('../assets/img/login-stg-m.jpg') no-repeat center; background-size: cover; opacity: .6;}
+             @media (max-width:900px) and (orientation:landscape) {
+                &:after { content: ""; }
+            }
+        }
+    }
+    .scroll-content {
+        display: flex;
+        background-color: $color-hd-lightsand;
+        .login-container {
+            position: relative;
+            background-color: white;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 15px;
+            margin-right: 15px;
+            width: 100%;
+            z-index: 1;
+
+            @media (min-width:768px) and (orientation:portrait) { margin-left: 140px; margin-right: 140px; }
+            @media (min-width:1024px) and (orientation:portrait) { margin-left: 268px; margin-right: 268px; }
+            @media (min-width:1024px) and (orientation:landscape) { margin-left: 268px; margin-right: 268px; }
+            @media (min-width:1200px) and (orientation:landscape) { margin-left: 438px; margin-right: 438px; }
+
+            @media (max-width:900px) and (orientation:landscape) { margin-left: 162px; margin-right: 162px; }
+            @media (max-width:767px) and (orientation:landscape) { margin-left: 124px; margin-right: 124px; }
+            @media (max-width:603px) and (orientation:landscape) { margin-top: 15px; margin-bottom: 15px;
+                .ivt-button-container { padding-top: 10px; }
+            }
+        }
+    }
+    ion-title {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .toolbar-title {
+            font-family: $font-head-m;
+            font-size: 2.2rem;
+            font-weight: normal;
+        }
+
+        @media (orientation:landscape) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .list-md {
+        margin: -1px 0 32px;
+    }
+    .ivt-input {
+        border: 1px solid #d4caca;
+        input {
+            padding-left: 10px;
+        }
+    }
+    .ivt-item {
+        // font-size: 1rem;
+        &.item-md, &.item-ios {
+            margin-bottom: 6px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .item-inner {
+            padding-right: 0px !important;
+        }
+    }
+    .ivt-button {
+        background-color: $color-hd-blue;
+        font-family: $font-text-m;
+        font-size: $font-size-sm;
+        width: 60%;
+        height: 44px;
+        margin: auto;
+        border-radius: 0;
+        &.button-clear-ios, &.button-clear-md {
+            background-color: transparent;
+            color: $color-hd-blue;
+        }
+    }
+    .ivt-button-container {
+        padding-top: 30px;
+    }
+    .select-lang {
+        .input-wrapper {
+            border: 1px solid #d4caca;
+            @include padding(null, null, null, 10px);
+            .label { color: #999; }
+        }
+    }
+}

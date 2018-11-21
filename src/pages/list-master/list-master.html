@@ -1,0 +1,171 @@
+<ion-header>
+
+	<ion-navbar class="head-nav-bar">
+		<ion-buttons left>
+			<i class="top-logo icon_h icon_hyundai" aria-label="Hyundai"></i>
+		</ion-buttons>
+		<ion-title class="header-title" (click) = "showDeveloperPage()">{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+		<!-- <ion-buttons right>
+			<button ion-button clear (click)="openReminder();">
+				<ion-icon name="icon_bell" class="notifications" *ngIf="reminderTotal > 0">
+					<ion-badge>{{reminderTotal}}</ion-badge>
+				</ion-icon>
+			</button>
+		</ion-buttons> -->
+	    <button end ion-button menuToggle>
+	      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+	    </button>
+	</ion-navbar>
+
+	 
+
+</ion-header>
+
+<ion-content class="content-home">
+	<ion-grid class="top-home-page">
+		<ion-row>
+			<ion-col col-4 text-center>
+				<p class="bold black number">{{vehiclesTotal}}</p>
+				<p class="txt">{{ 'home.total_vehicles' | translate}}</p>
+			</ion-col>
+			<ion-col col-4 text-center>
+				<p class="bold black number">{{vehiclesOnRoad.length}}</p>
+				<p class="txt">{{ 'home.on_the_road' | translate}}</p>
+			</ion-col>
+			<ion-col col-4 text-center>
+				<p class="bold black number">{{vehiclesWaiting.length}}</p>
+				<p class="txt">{{ 'home.waiting' | translate}}</p>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid class="onload-vehicle">
+		<ion-row>
+			<ion-col auto>
+				<div>
+					<span>{{ 'home.vehicle_on_the_road' | translate}}</span>
+					<span class="box-point">{{vehiclesOnRoad.length}}</span>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid no-padding>
+		<ion-row>
+			<ion-col no-padding>
+				<ion-slides *ngIf="vehiclesOnRoad.length > 0" pager="true" dir="{{direction}}">
+					<ion-slide *ngFor="let item of vehiclesOnRoad">
+						<ion-card>
+							<ion-card-content no-padding>
+								<div class="image">
+									<ion-row>
+										<ion-col col-6 text-start>
+											<ion-icon name="icon_man"></ion-icon>
+											<span>{{item.customer.fullName}}</span>
+										</ion-col>
+										<ion-col col-6 text-end>
+											<ion-icon name="icon_smile"></ion-icon>
+											<span>{{item.customer.consultant.name}}</span>
+										</ion-col>
+									</ion-row>
+									<img [src]="domSanitizer.bypassSecurityTrustUrl(item.frontPicture.url)" *ngIf="item.frontPicture.url" class="slide-image" />
+								</div>
+								<ion-row>
+									<ion-col col-8 text-start>
+										<h2 class="slide-title">{{item.vehicleType.name}} ({{item.plateNo}})&#x200E;</h2>
+									</ion-col>
+									<ion-col col-4 text-end>
+										<div>
+											<ion-icon name="icon_clock"></ion-icon>
+											<span>{{item.drivenDurationInSec | timeDuration}}</span>
+										</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-8 text-start>
+										<p>{{item.modelYear.name}} {{item.trim.name}}</p>
+									</ion-col>
+									<ion-col col-4 text-end>
+										<div>
+											<ion-icon name="icon_car"></ion-icon>
+											<span>{{item.drivenMileage | number}}km</span>
+										</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-8 text-start>
+										<div>
+											<ion-icon name="icon_location"></ion-icon>
+											<span>{{item.location.address}}</span>
+										</div>
+									</ion-col>
+									<ion-col col-4 text-end>
+										<div>
+											<ion-icon name="icon_rotate"></ion-icon>
+											<span>{{syncedTime | date: 'HH:mm:ss'}}</span>
+										</div>
+									</ion-col>
+								</ion-row>
+							</ion-card-content>
+						</ion-card>
+					</ion-slide>
+				</ion-slides>
+				<ion-card *ngIf="vehiclesOnRoad.length === 0" text-center>
+					<ion-card-content>
+						<p>{{ 'home.the_test_vehicle_is_not_in_use' | translate}}</p>
+					</ion-card-content>
+				</ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-grid class="onload-vehicle">
+		<ion-row>
+			<ion-col>
+				<div>
+					<span>{{ 'home.vehicle_waiting' | translate}}</span>
+					<span class="box-point">{{vehiclesWaiting.length}}</span>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid class="list-vehicle" *ngIf="empty != 0">
+		<ion-row class="list-head">
+			<ion-col start col-7>
+				<p>{{ 'home.vehicles' | translate}}</p>
+			</ion-col>
+			<ion-col end col-5 text-right>
+				<p>{{ 'home.today_reservation' | translate}}</p>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<ion-list>
+					<ion-item (click)="openResevation(item)" *ngFor="let item of vehiclesWaiting; let i = index">
+						<ion-row align-items-center	justify-content-center>
+							<ion-col start col-9>
+								{{item.vehicleType.name}} ({{item.plateNo}})&#x200E;
+							</ion-col>
+							<ion-col  col-2 text-center>
+								{{item.todayReservationCount}}
+							</ion-col>
+							<ion-col col-1 text-right>
+								<ion-icon name="arrow-forward"></ion-icon>
+							</ion-col>
+						</ion-row>
+					</ion-item>
+				</ion-list>
+			</ion-col>
+		</ion-row>
+
+	</ion-grid>
+	<ion-grid no-padding *ngIf="vehiclesWaiting.length == 0">
+		<ion-row>
+			<ion-col no-padding class="col-card">
+				<ion-card text-center>
+					<ion-card-content>
+						<p>{{ 'home.there_are_no_vehicles_waiting' | translate}}</p>
+					</ion-card-content>
+				</ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

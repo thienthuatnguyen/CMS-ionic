@@ -1,0 +1,66 @@
+<ion-header>
+
+    <ion-navbar class="head-nav-bar">
+      <button type="button" end ion-button menuToggle>
+        <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+      </button>
+      <ion-title class="header-title">{{ 'RESERVATION_TITLE' | translate }}</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+    <form #form="ngForm" (ngSubmit)="save(form)" validate>
+      <ion-item>
+        <ion-label stacked>{{ 'RESERVATION_DATE' | translate }}</ion-label>
+        <ion-datetime cancelText="{{ 'CANCEL_BUTTON' | translate }}" doneText="{{ 'DONE_BUTTON' | translate }}" max="{{maxYear}}" name ="reservationDate" displayFormat="MM/DD/YYYY" [(ngModel)]="reservation.appointmentDate" (ngModelChange)="changeReservationDate(reservation.appointmentDate)"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{ 'VEHICLE_NAME' | translate }}</ion-label>
+        <ion-select cancelText="{{ 'CANCEL_BUTTON' | translate }}" okText="{{ 'OK_BUTTON' | translate }}" name="vehicleId" required placeholder="{{ 'SELECT_A_VEHICLE' | translate }}" [(ngModel)]="reservation.vehicleId" (ngModelChange)="changeVehicle(reservation.vehicleId)">
+          <ion-option *ngFor="let item of vehicleList" value="{{item.id}}">{{item.vehicleType.name}} ({{item.plateNo}})&#x200E;</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="input-field">
+        <ion-label stacked>{{ 'CUSTOMER_NAME' | translate }}</ion-label>
+        <ion-input required name="customerName" [(ngModel)]="reservation.customerFullName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{ 'PHONE_NO' | translate }} *</ion-label>
+        <ion-input name ="customerPhoneNumber" required [(ngModel)]="reservation.customerPhoneNumber"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{ 'RECOMMENDER' | translate }}</ion-label>
+        <ion-input name ="recommenderFullName" [(ngModel)]="reservation.recommenderFullName"></ion-input>
+      </ion-item>
+  
+      <div class="select-schedule">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-3 *ngFor="let item of reservationTimeSlots; let i = index">
+              <button type="button" [disabled]="isDisabled(item)" [class.selected]="item.timeSelected" (click)="selectTimeSlot(item, i)"
+                ion-button full>{{ item.timeInHHMM }}</button>
+              <span class="sign">
+                <i *ngIf="item.assignedToMe || item.assignedToOtherConsultantUser" class="private-sign icon_man"></i>
+                <i *ngIf="item.assignedToThisVehicle" class="vehicle-sign icon_vehiclecheck"></i>
+              </span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+  
+      <ion-grid class="default-button-group">
+        <ion-row>
+          <ion-col>
+            <button type="button" *ngIf="!reservation.id" ion-button full color="light" (click)="cancel()">{{ 'CANCEL_BUTTON' | translate }}</button>
+            <button type="button" full color="light" [disabled]="isDoneReservation()" *ngIf="reservation.id" ion-button (click)="cancelReservation()">{{ 'CANCEL_RESERVATION_BUTTON' | translate }}</button>
+          </ion-col>
+          <ion-col>
+            <button type="submit" full [disabled]="!form.valid  || isDoneReservation()" ion-button>{{ 'SAVE_BUTTON' | translate }}</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+
+  </ion-content>

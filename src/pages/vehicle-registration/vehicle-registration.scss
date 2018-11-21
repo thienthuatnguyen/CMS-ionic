@@ -1,0 +1,90 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+page-vehicle-registration {
+
+    .item-block.search-bluetooth {
+        .item-inner {
+            border: none;
+        }
+
+        .label {
+            position: relative;
+            margin-bottom: 0;
+            margin-right: 0;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .button { 
+            display: flex; 
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            height: 26px;
+            top: 5px;
+            @include rtl() { left: 0; right: inherit; }
+            &:before { content: "\f128"; display: flex; font-family: "Ionicons"; }
+        }
+    }
+
+	.list-ios > .item-block:first-child { border-top-color: transparent; }
+    .camera-front, .camera-side { height: 75px; background-image: linear-gradient(0deg, #ECECEC, #f4f4f4); color: black; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.1);
+    	.button-inner { 
+    		> div { padding: 10px; 
+    			> div { padding: 0px 10px 8px; 
+    				&:last-child { padding: 5px 10px 0; font-family: $font-text-r; font-size: $font-size-xs; }
+    			}
+    		}
+    	}
+    	+ .card-content { padding-bottom: 10px; }
+    }
+
+    .list {
+        &-md {
+            .item-input {
+                //&:last-child { border-bottom-width: 0; }
+                &.ng-valid {
+                    &.item-input-has-value, &.input-has-value {
+                        &:not(.input-has-focus):not(.item-input-has-focus):last-child { border-bottom: 0; box-shadow: none; 
+                            .item-inner { border-bottom-width: 1px; border-bottom-style: solid; }
+                        }
+                    }
+                }
+                &.item-input-has-focus, &.input-has-focus {
+                    &:last-child {
+                      border-bottom-color: transparent;
+                      box-shadow: none;
+                        .item-inner { 
+                          border-bottom-color: $color-hd-activeblue;
+                          -webkit-box-shadow: inset 0 -1px 0 0 $color-hd-activeblue;
+                          box-shadow: inset 0 -1px 0 0 $color-hd-activeblue;
+                        }
+                    }
+                }
+            }
+            > .item-block, > .item-wrapper { 
+                &:last-child { border-bottom: 0; 
+                    .item-inner { border-bottom: 1px solid $color-border-basic; }
+                }
+            }
+        }
+        &-ios {
+            > .item-block:last-child, > .item-wrapper:last-child .item-block { border-bottom: 0; 
+                .item-inner { border-bottom: 0.55px solid #c8c7cc; }
+            }
+            .item-input {
+                &.item-input-has-focus, &.input-has-focus {
+                    &:last-child {
+                        .item-inner { 
+                          border-bottom-color: $color-hd-activeblue;
+                          -webkit-box-shadow: inset 0 -1px 0 0 $color-hd-activeblue;
+                          box-shadow: inset 0 -1px 0 0 $color-hd-activeblue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

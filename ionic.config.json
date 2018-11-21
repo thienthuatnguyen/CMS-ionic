@@ -1,0 +1,11 @@
+{
+  "name": "SmartTestDrive",
+  "app_id": "e40e3ab1",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {},
+    "gulp": {
+      "enabled": false
+    }
+  }
+}

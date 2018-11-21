@@ -1,0 +1,48 @@
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-header {
+    flex: 0 0 60px;
+}
+
+.modal-content {
+    min-height: 0;
+    flex: 1;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-bottom {
+    flex: 0 0 auto;
+    background: white;
+}
+
+.image-model-content-grid {
+    max-height: 100%;
+
+    @media (orientation: landscape) {
+        height: 100%;
+    }
+}
+
+.image-model-content-row {
+    height: 100%;
+}
+
+.image-model-pic {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    max-height: 100%;
+
+    @media (orientation:portrait) {
+        width: 100%;
+        height: auto;
+    }
+}

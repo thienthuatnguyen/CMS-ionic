@@ -1,0 +1,51 @@
+@import "../../assets/css/_variables";
+
+page-menu {
+}
+ion-menu {
+	ion-content.content, ion-content.content-ios, ion-content.content-md { background-color: $color-hd-lightsand; }
+}
+.icon_h { font-family:'sampleIcon'; font-size:24px; font-style: normal; }
+.menu-header { background-color: $color-grey-dark; color: white; 
+	h2 { margin: 0 0 4px; font-family: $font-head-m; font-size: $font-size-sm; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }	
+	p { margin: 0; font-size: $font-size-xxs; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	ion-avatar { position: relative; width: 53px; height: 53px; border-radius: 50%; background-color: rgba(255,255,255,.6); overflow: hidden; text-align: center;
+		img { position: absolute; left: 0; top: 0; display: block; margin: auto; width: auto; height: auto; max-height: 100%; text-align: center; }
+		&:before { display: block; @extend .icon_h; content:'\004C'; font-size: 3.0rem; line-height: 53px; color: $color-icon; }
+	}
+	.grid { padding: 8px 5px; }
+	.row { align-content: center; align-items: center; 
+		> ion-col:first-child { max-width: 66px; }
+		.col:last-child { max-width: 225px; }
+	}
+}
+ion-menu {
+	.list-md, .list-ios {
+		.item, .item-ios, .item-md { @include padding(null, 10px, null, 20px);
+			&.item-block { min-height: 56px; }
+			ion-icon[item-left], ion-icon[item-start] { 
+				&:before { font-size: 2.0rem; height: 28px; }
+				&[aria-label=icon_carsearch] {
+					&:before { font-size: 2.3rem; }
+				}
+				&[aria-label=icon_guage] {
+					&:before { font-size: 2.3rem; }
+				}
+			}
+		}
+	}
+	.list-md {
+		ion-icon[item-left], ion-icon[item-start] {
+			+ .item-inner { 
+				@include margin(null, null, null, 5px);
+				@include padding(null, null, null, 5px);
+			}
+			+ .item-input { @include margin(null, null, null, 10px); }
+		}
+	}
+	.list-ios {
+		ion-icon[item-left], ion-icon[item-start] {
+			+ .item-inner { padding-right: 0; background: none; }
+		}
+	}
+}

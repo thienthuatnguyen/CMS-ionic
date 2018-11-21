@@ -1,0 +1,94 @@
+<!--
+  Generated template for the TestDriveResultPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar  hideBackButton *navbar class="head-nav-bar">
+    <button end ion-button menuToggle>
+      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+    </button>
+    <ion-title class="header-title">{{ 'TESTDRIVERESULT_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="vehicle-title">
+    {{item.vehicleDisplayName}}
+  </div>
+
+  <div class="drive-result">
+    <div class="drive-button-group">
+      <ion-grid>
+        <ion-row>
+          <!-- <ion-col>
+            <button ion-button full (click)="restartRecord()" class="continue"><span>{{ 'test_drive.test_drive' | translate }}</span><span>{{ 'test_drive.continue' | translate }}</span></button>
+          </ion-col> -->
+          <ion-col>
+            <button ion-button full (click)="finishTestDrive()" class="finish"><span></span><span>{{ 'test_drive.drive_finish' | translate }}</span></button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="drive-statistics">
+      <ion-grid class="statistics-head">
+        <ion-row>
+          <ion-col>
+            <p><ion-icon name="icon_clock"></ion-icon>{{ 'test_drive.driving_time' | translate }}</p>
+            <p>{{ displayDrivenDurationInSec }}</p>
+          </ion-col>
+          <ion-col>
+            <p><ion-icon name="icon_car"></ion-icon>{{ 'test_drive.total_distance' | translate }}</p>
+            <p>{{ drivenMileage |number:'1.1-1' }} &nbsp;<span>{{ 'test_drive.km' | translate }}</span></p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-card class="travel-route">
+        <dl class="travel-course" *ngFor="let item of previousRecordItems">
+          <dt>
+            <span class="date-time">{{item.drivenStartTime | date: displayDateFormat}}</span>
+            <span class="distance">{{item.drivenDurationInSec}} / {{item.drivenMileage | number:'1.1-1'}} km</span> <!---->
+          </dt>
+          <dd>
+            <p class="text-row">
+              <span class="course-message course-start">
+                {{item.startFullAddress}}
+              </span>
+            </p>
+          </dd>
+          <dd>
+            <p class="text-row">
+              <span class="course-message course-end">
+                <em>{{item.endFullAddress}}</em>
+              </span>
+            </p>
+          </dd>
+        </dl>
+
+        <!--         <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <ion-icon name="icon_location"></ion-icon>
+
+                    </ion-col>
+                    <ion-col>
+                      <h2>{{item.endRecordTime}}</h2><br>
+                      {{item.item.location}}<br>
+                      {{item.endLocation}}<br>
+                      {{item.recordTime}}<br>
+                      {{item.recordDistance}}
+                    </ion-col>
+                  </ion-row>
+                </ion-grid> -->
+
+      </ion-card>
+    </div>
+
+  </div>
+</ion-content>

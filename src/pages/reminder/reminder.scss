@@ -1,0 +1,26 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+page-reminder {
+	.card-md, .card-ios { box-shadow: none; @include border-box($color-hd-sand); border-radius: 0; }
+	.list {
+		.item { 
+			&.item-block { 
+				&:first-child { min-height: 3.6rem; }
+			}
+			&:first-child { margin-bottom: 5px; font-family: $font-text-m; background-color: $color-hd-lightsand; letter-spacing: -0.5px; }
+			.label { font-size: 1.4rem; }
+			&:not(:first-child) { 
+				&.item-block { min-height: 3.2rem; }
+				.icon { margin: 1px 8px 1px 0; line-height: 2.0rem;
+					&:before { font-size: 2.0rem; } 
+					+ .item-inner { margin-left: 0px;
+						.label { margin: 4px 0px; color: $color-grey-dark; }
+					}
+					&[name="icon_clock"]:before { font-size: 1.7rem; }
+				}
+			}
+			&:last-child { padding-bottom: 3px; }
+		}
+	}
+}

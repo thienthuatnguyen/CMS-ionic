@@ -1,0 +1,110 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+page-reservation-list {
+    .reservation-list {
+        .item {
+            &-ios, &-md {
+                .item-inner { padding-right: 0; }
+                .label { 
+                    h2 { margin: 0 0 7px; font-family: $font-text-m; font-size: $font-size-sm; @include text-overflow(); }
+                    p { margin: 0 0 2px; font-size: $font-size-xs; color: $color-grey-dark; @include text-overflow();}
+                    .assigned-to { margin: 0 0 0px; font-size: $font-size-xxs; color: $color-grey-basic; @include text-overflow(); }
+                    @include rtl() { margin-right: 0; }
+                }
+            }
+            .input-wrapper + [item-end] { margin-right: 0; min-width: 52px; 
+                @include rtl() { margin-left: inherit; }
+            }
+        }
+        .open-time { font-family: $font-text-m; font-size: $font-size-sm; letter-spacing: -0.5px; }
+        .status { margin-right: 5px; height: 24px; font-size: 12px; min-width: 70px; max-width: 90px; text-align: center;
+            @include rtl() { padding-left: 5px; padding-right: 0px; }
+            span { display: flex; margin-top: 1px; padding: 0 5px; height: 22px; border-radius: 12px; background-color: #DEDEDE; color: $color-icon-text !important; letter-spacing: -0.3px; align-items: center; align-content: center; justify-content: center; }
+            .complete { background-color: transparent; }
+            .upcoming { background-color: #DEDEDE; }
+            .inprogress { background-color: #DEDEDE;  }
+            .appointment { background-color: transparent; border: 1px solid #dedede; }
+            + div { margin-top: 1px;
+                .icon:before { font-size:2.0rem; color: $color-hd-blue; }
+            }
+        }
+
+        button, .button { padding: 0; @include circle(48px); font-family: $font-text-m; font-size: $font-size-xxs; 
+            &.write-document { background-color: $color-grey-dark; 
+                .icon:before { font-size:2.0rem; }
+            }
+            &.drive-start { background-color: $color-hd-blue; }
+            .button-inner span { font-size: .9em; text-transform: initial; }
+        }
+/*
+        &:last-child{
+            border-bottom: 0.55px solid #c8c7cc;
+            .reservation-item-data{
+                border-bottom: none !important;
+            } 
+        }
+        */
+    }
+
+    .list-header { margin-top: -1px; font-size: $font-size-sm; font-family: $font-head-r; font-weight: normal; color: #000; background: initial; border-top: 1px solid #c8c7cc;
+        //&:first-of-type { margin-top: 0; border-top: 0; }
+        &-md { margin-bottom: 0; border-bottom: 1px solid #c8c7cc; min-height: inherit; }
+        &.item {
+            &-ios, &-md { 
+                .label { margin-top: 25px; font-family: $font-text-m; }
+            }
+        }
+        .label { 
+            &-md, &-ios { margin: 10px 8px 10px 0; }
+        }
+        .box { display: inline-block; margin-left: 5px; padding: 2px 8px; min-width: 28px; height: 18px; background-color: #C8C7CC; font-family: $font-text-r; font-size: $font-size-xxs; text-transform: initial; @include round(9px); text-align: center; vertical-align: middle; letter-spacing: -.5px;
+            &:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
+        }
+    }
+
+    .search { 
+        .bar-button { margin: 1px 6px 4px; color: $color-icon; height: 45px; 
+            [name="icon_man"] { font-size: 1.2rem; 
+                &:before { display: block; margin-top: 11px; margin-bottom: 6px; font-size: 2.2rem; }
+                &.icon-ios:before { margin-top: 12px; }
+                &:after { display: block; content: "My"; }
+            }
+            &-md[icon-only] {
+                .icon { max-width: 28px; }
+            }
+            &-ios[icon-only] {
+                .icon { width: 28px; }
+            }
+        }
+        .searchbar { padding: 10px 4px; 
+            &-input { padding-left: 30px; padding-right: 20px; height: 40px; @include border-radius(0); font-size: $font-size-xs; box-shadow: 0 2px 3px rgba(0,0,0,.12); letter-spacing: -1px; }
+            &.searchbar-md .searchbar-search-icon { top: 10px; }
+            &.searchbar-ios .searchbar-search-icon { top: 12px; width: 16px; height: 16px; background-size: 16px; }
+            &.searchbar-ios .searchbar-input { background-color: white; }
+
+            @include ltr() { 
+                &-input { padding-left: 30px; padding-right: 25px; }
+                &.searchbar-md {
+                    .searchbar-search-icon { left: 6px; }
+                    .searchbar-clear-icon { right: 3px; }
+                }
+                &.searchbar-ios {
+                    .searchbar-search-icon { left: 10px; }
+                }
+            }
+            @include rtl() { 
+                &-input { padding-left: 25px; padding-right: 30px; text-align: end; }
+                &.searchbar-md {
+                    .searchbar-search-icon { right: 6px; }
+                    .searchbar-clear-icon { left: 3px; }
+                }
+                &.searchbar-ios {
+                    .searchbar-search-icon { right: 10px; }
+                }
+            }
+        }
+        .toolbar-background  { padding: 0px; background-color: $color-hd-lightsand; }
+    }
+    
+}

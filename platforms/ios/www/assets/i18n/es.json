@@ -1,0 +1,329 @@
+{  
+  "APP_NAME": "Prueba de Manejo Inteligente",
+  "APP_NATION_NAME": "Ecuador",
+  "APP_VERSION": "v1.0",
+  "BACK_BUTTON_TEXT": "Atrás",
+  "KM_MILE":"km",
+
+  "NAME": "Nombre",
+  "TENANCYNAME": "Código",
+  "EMAIL": "Email",
+  "USERNAME": "Nombre de usuario",
+  "PASSWORD": "Contraseña",
+  "LOGIN": "Iniciar Sesión",
+  "SIGNUP": "Regístrate",
+  "LANGUAGE": "Idioma",
+  "menu": {
+    "home": "Prueba de Inicio",
+    "test_drive_reservation": "Reserva de Prueba de Manejo",
+    "test_drive": "Prueba de Manejo",
+    "cs_survey": "Encuesta de CS",
+    "vehicle_health_check": "Comprobación de Estado del Vehículo",
+    "vehicle_list": "Lista de Vehículos",
+    "setting": "Ajuste",
+    "manual": "Manual",
+    "logout": "Cerrar Sesión"
+  },
+  "tabs_page": {
+    "tab1": {
+      "title": "Inicio"
+    },
+    "tab2": {
+      "title": "Reservación"
+    },
+    "tab3": {
+      "title": "Prueba de Manejo"
+    },
+    "tab4": {
+      "title": "Encuesta"
+    }
+  },
+  "GEO_TITLE": "PRUEBA DE GPS",
+  "MAP_TITLE": "Mapa",
+  "TUTORIAL_SKIP_BUTTON": "Omitir",
+  "TUTORIAL_CONTINUE_BUTTON": "Continuar",
+  "TUTORIAL_SLIDE1_TITLE": "Bienvenido al Ionic Super Starter",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "El <b>Ionic Super Starter</b> es un arrancador de Ionic totalmente equipado con muchas páginas preconstruidas y mejores prácticas.",
+  "TUTORIAL_SLIDE2_TITLE": "Cómo utilizar el Super Starter",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Ensamble los distintos tipos de página que desee y elimine los que no desee. Hemos proporcionado muchos diseños de página de aplicaciones móviles comunes, como páginas de inicio de sesión y de suscripción, pestañas y esta página de tutorial.",  
+  "TUTORIAL_SLIDE3_TITLE": "Empezando",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "¿Necesitas ayuda? Echa un vistazo a el archivo README de Super Starter para obtener un tutorial completo.",
+  "TUTORIAL_SLIDE4_TITLE": "¿Listo para jugar?",
+  "WELCOME_INTRO": "El punto de partida para su próxima gran aplicación del Ionic",
+  "SETTINGS_TITLE": "Ajustes",
+  "SETTINGS_OPTION1": "Opción 1",
+  "SETTINGS_OPTION2": "Opción 2",
+  "SETTINGS_OPTION3": "Opción 3",
+  "SETTINGS_OPTION4": "Opción 4",
+  "SETTINGS_PROFILE_BUTTON": "Editar Perfil",
+  "SETTINGS_LOGOUT_BUTTON": "Cerrar Sesión",
+  "SETTINGS_PASSWORD_BUTTON": "Cambiar la Contraseña",
+  "SETTINGS_PAGE_PROFILE": "Configuración de Cuenta",
+  "PHOTO": "Foto",
+  "TAKE_PHOTO": "Tomar foto",
+  "SETTINGS_LOGOUT": "Cerrar Sesión",
+  "WELCOME_TITLE": "Bienvenido",
+  "LOGIN_TITLE": "Iniciar Sesión",
+  "LOGIN_ERROR": "No se ha podido iniciar su sesión. Por favor, consulte la información de su cuenta y vuelva a intentarlo.",
+  "LOGIN_BUTTON": "Iniciar Sesión",
+  "SIGNUP_TITLE": "Regístrate",
+  "SIGNUP_ERROR": "No se puede crear la cuenta. Verifique la información de su cuenta y vuelva a intentarlo.",
+  "SIGNUP_BUTTON": "Regístrate",
+  "TESTDRIVEREADY_TITLE": "Prueba de Manejo Listo",
+  "TESTDRIVERECORD_TITLE": "Récord de Prueba de Manejo",
+  "TESTDRIVERESULT_TITLE": "Resultado de Prueba de Manejo",
+  "CSSURVEY_TITLE": "Encuesta de CS",
+  "VEHICLELIST_TITLE": "Lista de Vehículos",
+  "ENDTESTDRIVE_CONFIRM": "¿Está seguro de que desea terminar la prueba de manejo?",
+  "DOCUMENT_TITLE": "Documento de Prueba de Manejo",
+  "REMINDER_TITLE": "Recordatorio",
+  "VEHICLE_HEALTH_CHECK_TITLE": "Comprobación de Estado del Vehículo",
+  "VEHICLE_REGISTRATION_TITLE": "Registro de Vehículo",
+
+  "MANUAL_TITLE": "Manual",
+  "REPAIR": "Reparar",
+  "ON_THE_ROAD": "En la carretera",
+  "WAITING": "Esperando",
+
+
+  "LIST_MASTER_TITLE": "Prueba de Manejo Inteligente",
+  "ITEM_CREATE_TITLE": "Nuevo Artículo",
+  "ITEM_CREATE_CHOOSE_IMAGE": "Añadir Imagen",
+  "ITEM_NAME_PLACEHOLDER": "Nombre",
+  "ITEM_ABOUT_PLACEHOLDER": "Acerca de",
+  "DONE_BUTTON": "Terminado",
+  "CANCEL_BUTTON": "Cancelar",
+  "DELETE_BUTTON": "Borrar",
+  "SAVE_BUTTON": "Guardar",
+  "OK_BUTTON": "OK",
+  "YES_BUTTON": "Sí",
+  "NO_BUTTON": "No",
+  "CLOSE_BUTTON": "Cerrar",
+  "SEARCH_BUTTON": "Buscar",
+  "BEGIN_SHOOTING_BUTTON": "Comienze a grabar",
+  "CARDS_TITLE": "Social",
+  "RESERVATION_LIST_TITLE": "Lista de Reserva",
+  "SEARCH_PLACEHOLDER": "Consultor de ventas, cliente, búsqueda de vehículos.",
+  "vehicle": {
+    "photo_upload": {
+      "title": "No de Placa",
+      "guide": {
+        "front": {
+          "line1": "Por favor, tome una foto de la parte delantera del vehículo",
+          "line2": "(asegúrese de que la placa esté claramente visible)"
+        },
+        "rear": {
+          "line1": "Por favor, tome una foto de la parte lateral del vehículo",
+          "line2": "(asegúrese de que la calcomanía esté claramente visible)"
+        }
+      }
+    }
+  },
+  "reservation": {
+    "status": {
+      "Appointment" : "Próximo",
+      "NoShow": "No se Presenta",
+      "CheckIn": "Listo",
+      "Driving": "En Progreso",
+      "Done": "Completado",
+      "Expired": "Expirado",
+      "Canceled": "Cancelado"
+    },
+    "this_time_slot_cannot_selected": "Este intervalo de tiempo no se puede seleccionar",
+    "you_can_only_proceed_with_your_reservation":"Solo puede continuar con su reserva.",
+    "validation":{
+      "term_of_service_message": "Sin su acuerdo con los Términos del Servicio, no puede enviar su solicitud."
+    }
+  },
+  "survey_detail": {
+    "title": "Encuesta de CS"
+  },
+  "CURRENT_PASSWORD": "Contraseña Actual",
+  "NEW_PASSWORD": "Nueva Contraseña",
+  "CONFIRM_PASSWORD": "Confirmar Contraseña",
+
+  "RESERVATION_TITLE": "Reserva de Prueba de Manejo",
+  "RESERVATION_DATE": "Fecha de Reserva",
+  "VEHICLE_NAME": "Vehículo",
+  "SELECT_A_VEHICLE": "Seleccione un vehículo",
+  "CUSTOMER_NAME": "Nombre del Cliente",
+  "PHONE_NO": "No de Teléfono",
+  "RECOMMENDER": "Recomendador",
+  "CANCEL_RESERVATION_BUTTON": "Cancelar la Reserva",
+  "ARE_YOU_SURE_YOU_WANT_TO_MAKE_A_RESERVATION": "¿Está seguro de que desea hacer una reserva?",
+  "YOUR_RESERVATION_WAS_MADE_OR_WAS_CHANGED_SUCCESSFULLY": "Su reserva ha sido realizada o cambiada satisfactoriamente.",
+  "YOUR_RESERVATION_HAS_BEEN_CHANGED_DO_YOU_WANT_TO_SAVE_IT": "Su reserva ha sido cambiada. ¿Quieres guardar los cambios?",
+  "ARE_YOUR_SURE_YOU_WANT_TO_CANCEL_THIS_RESERVATION": "¿Está seguro de que desea cancelar esta reserva?",
+  "YOUR_RESERVATION_WAS_CANCELED_SUCCESSFULLY": "Su reserva ha cancelada satisfactoriamente.",
+
+  "ADD_VEHICLE_BUTTON": "Añadir Vehículo",
+  "SELECT_VEHICLE_BLUETOOTH": "Seleccionar vehículo Bluetooth",
+  "VEHICLE_MODEL": "Modelo de vehículo",
+  "SELECT_A_BLUETOOTH_AUDIO_DEVICE_INSTALLED_ON_THE_VEHICLE": "Seleccione un dispositivo Bluetooth del vehículo",
+  "SELECT_A_VEHICLE_MODEL": "Seleccione el tipo de vehículo",
+  "SELECT_A_YEAR": "Seleccione un año",
+  "SELECT_A_TRIM": "Seleccione la configuración",
+  "PLATE_NUMBER": "No de Placa",
+  "MODEL_YEAR": "Año",
+  "TRIM": "Configuración",
+  "INITIAL_OPERATING_DISTANCE": "Distancia de funcionamiento inicial",
+  "FRONT_SIDE": "Parte delantera",
+  "SIDE": "Parte trasera",
+  "TEST_VEHICLE_SELECT": "Selección de Vehículo de Prueba",
+  "COMMENT": "COMENTARIO",
+  "CHECK_DATE": "Fecha de Chequeo",
+  "SALES_CONSULTANT": "Consultor de ventas",
+  "msg": {
+    "app_is_downloading_and_updating":"La aplicación está descargando y actualizando ...",
+    "to_continue_using_app_you_must_allow_app_to_access_photos_media_and_files_on_your_device": "Para continuar usando la aplicación, debes permitir que la aplicación acceda a fotos, archivos multimedia y archivos en tu dispositivo",
+    "confirm_title": "Confirmar",
+    "file_upload_failed": "No se pudo cargar el archivo",
+    "file_download_failed": "No se pudo descargar el archivo",
+    "unhandled_error": "Ocurrió un error inesperado",
+    "login": "Iniciando sesión",
+    "your_password_have_change": "Su contraseña ha sido cambiado.",
+    "save_successful": "Se guardo correctamente",
+    "are_you_sure_you_want_to_save": "¿Está seguro de que desea guardar?",
+    "file_not_found": "Archivo no encontrado",
+    "unable_to_take_photo": "Incapaz de tomar la foto",
+    "connect_success": "Conexión Correcta",
+    "vehicle_is_updated": "El vehículo está actualizado",
+    "vehicle_is_registered": "El vehículo esta registrado",
+    "are_you_sure_you_want_to_change_password": "¿Está seguro de que desea cambiar su contraseña?",
+    "bluetooth": "Bluetooth",
+    "bluetooth_is_off_do_you_want_to_proceed_anyway": "El Bluetooth está apagado. ¿Aún quieres continuar?",
+    "connecting_to_bluetooth_device": "Conectando al dispositivo de Bluetooth ...",
+    "gps": "GPS",
+    "access_to_location_services_is_denied": "El acceso a los servicios de localización han sido negados. En su configuración, active los servicios de ubicación e intente de nuevo.",
+    "receiving_geolocation": "Recibiendo geolocalización …",
+    "please_check_gps_permission": "Por favor, compruebe los permisos de GPS",
+    "available_gps": "gps disponibles",
+    "please_turn_on_your_bluetooth": "Por favor encienda su bluetooth",
+    "uploading_images": "Cargando imágenes…",
+    "cannot_get_your_location": "No se puede recuperar su ubicación actual. Por favor, compruebe la configuración de ubicación y vuelva a intentarlo",
+    "background_location_failed": "Error al recuperar la ubicación Volviendo a intentar ...",
+    "failed_to_get_record_session": "Error al obtener sesiones de registro",
+    "failed_to_create_driving_record": "Error al crear registros de manejo",
+    "failed_to_finish_record": "Error al terminar el registro",
+    "there_are_no_pictures": "No hay fotos",
+    "loading": "Cargando ...",
+    "please_select_a_vehicle_model_first": "Por favor, seleccione un modelo de vehículo primero.",
+    "please_select_a_vehicle_model_and_an_year_first": "Seleccione un modelo de vehículo y un año primero.",
+    "posting_test_drive_result": "Guardando el resultado de la prueba de manejo ...",
+    "finishing_driving_record": "Acabado registro de conducción",
+    "press_ok_when_you_are_ready": "Presiona Ok cuando estés listo para comenzar",
+    "failed_to_end_driving_record": "Error al finalizar el registro de manejo",
+    "it_take_too_much_time_keep_waiting": "Eso toma demasiado tiempo. ¿Sigues esperando o no?",
+    "location_service_required": "Para usar esta aplicación, debe activar el servicio de localización en la Configuración. Por favor, inténtelo de nuevo después de activar el servicio de ubicación.",
+    "network_disconnect_try_again": "La conexión de red tiene un problema. Por favor revisa tu red e intenta de nuevo",
+    "force_update_later": "Hay actualizaciones ¿Desea instalar las actualizaciones ahora mismo?",
+    "force_update_now": "Hay actualizaciones Sin instalar la actualización, no puede usar el servicio",
+    "later": "Luego",
+    "confirm_update": "Confirmar actualización",
+    "checkversion": "Comprobando la versión ..."
+  },
+  "DELETE_CAMERA_IMAGE": "¿Está seguro de que desea eliminar esta imagen?",
+  "card": {
+    "likes": "Me gusta",
+    "comments": "Comentarios",
+    "ago": "hace"
+  },
+  "survey": {
+    "customer": "Cliente"
+  },
+  "document": {
+    "tap_here_to_capture_drivers_license": "Haz clic aquí para capturar la licencia de conducir",
+    "customer_infomation": "Información del Cliente",
+    "gender": "Género",
+    "name": "Nombre",
+    "phone_no": "No de Teléfono",
+    "email": "Email",
+    "test_vehicle": "Vehículo de Prueba",
+    "terms_of_service": "Términos de Servicio",
+    "term_agree_1": "Al proporcionar su datos personales, acepta el uso y la divulgación de mi información personal de acuerdo con la declaración de privacidad de la empresa.",
+    "term_agree_2": "Acepto que Hyundai Motor Company Pty Limited me envie la última actualización, novedades y ofertas.",
+    "signature": "Firma",
+    "customer_signature": "Firma del Cliente",
+    "date_signed": "Fecha firmada",
+    "sales_consultants_signature": "Firma del consultor de ventas",
+    "male": "Masculino",
+    "female": "Hembra"
+  },
+  "home": {
+    "total_vehicles": "Total de Vehículos",
+    "on_the_road": "En la carretera",
+    "waiting": "Esperando",
+    "vehicle_on_the_road": "El vehículo está en la carretera",
+    "the_test_vehicle_is_not_in_use": "El vehículo de prueba no está en uso",
+    "vehicle_waiting": "El vehículo está esperando",
+    "vehicles": "Vehículos",
+    "today_reservation": "Reserva de Hoy",
+    "there_are_no_vehicles_waiting": "No hay vehículos esperando"
+  },
+  "reservation_list": {
+    "today": "Hoy",
+    "assigned_to": "Asignado a",
+    "drive_start": "Maneja<br />Iniciar"
+  },
+  "settings": {
+    "auto_start": "Inicio Automático",
+    "prevent_screen_from_sleeping": "Evitar que la pantalla se duerma",
+    "change_profile_picture": "Cambiar Foto de Perfil",
+    "change_password": "Cambiar la Contraseña",
+    "select_language": "Seleccione el idioma",
+    "logout": "Cerrar Sesión"
+  },
+  "splash": {
+    "hyundai": "Hyundai",
+    "driving_experience": "Experiencia de Manejo",
+    "smart_test_drive": "Prueba de Manejo Inteligente"
+  },
+  "test_drive": {
+    "get_in_the_test_vehicle": "Entra en el Vehículo de Prueba",
+    "start_the_engine": "arranca el motor.",
+    "reselection": "Reelección",
+    "bluetooth_connection_required": "Requiere conexión de Bluetooth",
+    "bluetooth_established_test_drive_start_soon": "La conexión Bluetooth se ha establecido correctamente. La prueba de manejo iniciará en breve",
+    "driving": "Manejando",
+    "paused": "Pausado",
+    "end": "Terminar",
+    "the_vehicle_departed_at": "El vehículo partió a las",
+    "driving_time": "Tiempo de Manejo",
+    "total_distance": "Distancia Total",
+    "km": "km",
+    "connection_failed_to": "La conexión falló a",
+    "tried_to_connect_to": "Intentó conectarse a",
+    "but_failed": "pero falló",
+    "reason": "Razón",
+    "do_you_want_to_proceed_anyway": "¿Aún quieres continuar?",
+    "test_drive": "Prueba de Manejo",
+    "continue": "Continuar",
+    "finish": "Terminar",
+    "drive_finish": "Haga clic aquí para finalizar",
+    "exit_test_drive_title_first_line": "¿Estás seguro de que quieres salir de la unidad de prueba?",
+    "exit_test_drive_title_second_line": "Solo presione OK cuando se complete la prueba.",
+    "exit_test_drive_subtitle": "En el caso de una parada temporal, presione CANCELAR para regresar a la pantalla anterior"
+  },
+  "vehicle_health_check": {
+    "upload_photos": "Cargar fotos"
+  },
+  "vehicle_registration": {
+    "scanning_bluetooth_devices": "Escaneando dispositivos de bluetooth …",
+    "no_bluetooth_device_found": "No se encontró un dispositivo de bluetooth",
+    "anonymous_device": "Dispositivo anónimo",
+    "activate_the_bluetooth_add_on_status_in_the_bluetooth_setting": "Active el estado del complemento Bluetooth en la configuración de Bluetooth del vehículo. <br /> <br /> Cuando esté listo, presione OK."
+  },
+  "UPLOAD_DATA_LOADING": "Subiendo ...",
+  "drive_shooting": {
+    "total_mileage": "Kilometraje total",
+    "highlight_and_shoot": "Resalta y dispara",
+    "should_take_a_photo_with_landscape_mode": "¡Debes tomar una foto con el modo Paisaje!",
+    "please_take_a_picture_of_the_front_of_the_vehicle": "Por favor, toma una foto de la parte delantera del vehículo",
+    "please_take_a_picture_of_the_side_of_the_vehicle": "Por favor, toma una foto del costado del vehículo",
+    "please_make_sure_the_license_plate_is_clearly_visible": "Asegúrese de que la matrícula sea claramente visible",
+    "please_take_a_picture_so_that_the_decal_looks_good": "Por favor, toma una foto para que la calcomanía se vea bien"
+  },
+  "bluetooth": {
+    "turn_on_bluetooth": "Por favor active bluetooth para continuar"
+  }
+}

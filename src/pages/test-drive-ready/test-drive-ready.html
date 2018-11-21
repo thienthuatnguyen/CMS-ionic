@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar  hideBackButton *navbar class="head-nav-bar">
+    <button end ion-button menuToggle>
+      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+    </button>
+    <ion-title class="header-title">{{ 'TESTDRIVEREADY_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding lightsand>
+  <h2 text-center>{{ 'test_drive.get_in_the_test_vehicle' | translate }} &amp; <br>{{ 'test_drive.start_the_engine' | translate }}</h2>
+  <div text-center class="bluetooth">
+    <ion-icon name="bluetooth"></ion-icon>
+    <span>{{btMsg | translate}}</span>
+  </div>
+  <div class="current-car">
+    <div class="car-image">
+      <img [src]="vehiclePicture" *ngIf="vehiclePicture"/>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-auto text-left>{{carInfo}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <ion-grid class="user-info">
+      <ion-row>
+        <ion-col col-auto><ion-icon name="icon_man"></ion-icon></ion-col>
+        <ion-col col-auto>{{item.consultantUserName}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col  col-auto><ion-icon name="happy"></ion-icon>
+        </ion-col>
+        <ion-col  col-auto>{{item.customerFullName}}</ion-col>
+      </ion-row>
+     <!-- <ion-row>
+        <ion-col  col-auto><ion-icon name="icon_car"></ion-icon></ion-col>
+        <ion-col  col-auto>마지막 종료시간</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto><ion-icon name="icon_location"></ion-icon></ion-col>
+        <ion-col col-auto>차량 현재 위치</ion-col>
+      </ion-row>-->
+    </ion-grid>
+  </div>
+
+  <div text-center padding class="return-button">
+    <button ion-button clear (click)="clickReselection()">
+      <ion-icon name="undo"></ion-icon>
+      <span>{{ 'test_drive.reselection' | translate }}</span>
+    </button>
+  </div>
+</ion-content>

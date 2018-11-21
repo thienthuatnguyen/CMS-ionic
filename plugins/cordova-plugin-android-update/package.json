@@ -1,0 +1,66 @@
+{
+  "_from": "cordova-plugin-android-update@^1.0.1",
+  "_id": "cordova-plugin-android-update@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-dGxgdI13gPSsbG+VbOzXbtggjwsW2sDeXCopRejWuDBpLizzS3ovreXCmFUkqMvHzC/N3yEVlRYmTe049mRc/A==",
+  "_location": "/cordova-plugin-android-update",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "cordova-plugin-android-update@^1.0.1",
+    "name": "cordova-plugin-android-update",
+    "escapedName": "cordova-plugin-android-update",
+    "rawSpec": "^1.0.1",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.1"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-android-update/-/cordova-plugin-android-update-1.0.1.tgz",
+  "_shasum": "cccf411bc00ff5da7bdf6327e8e982c428a4251e",
+  "_spec": "cordova-plugin-android-update@^1.0.1",
+  "_where": "/Users/mac/Documents/cordova/smarttestdrive",
+  "author": {
+    "name": "vaenow"
+  },
+  "bugs": {
+    "url": "https://github.com/htqbuu/cordova-plugin-android-update/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-android-update",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova App Update",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "homepage": "https://github.com/htqbuu/cordova-plugin-android-update#readme",
+  "keywords": [
+    "cordova",
+    "app",
+    "auto",
+    "update",
+    "updater",
+    "dynamic",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-android-update",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htqbuu/cordova-plugin-android-update.git"
+  },
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  },
+  "version": "1.0.1"
+}

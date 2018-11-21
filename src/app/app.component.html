@@ -1,0 +1,44 @@
+<ion-menu *ngIf="menuSide == 'right'" side="right" [content]="content">
+    <ng-container  *ngTemplateOutlet="contentMenu">
+    </ng-container>
+</ion-menu>
+<ion-menu *ngIf="menuSide == 'left'" side="left" [content]="content">
+    <ng-container  *ngTemplateOutlet="contentMenu">
+    </ng-container>
+</ion-menu>
+
+<ng-template #contentMenu>
+        <ion-content>
+                <div class="menu-header">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-3>
+                                <ion-avatar item-start>
+                                    <img *ngIf="avatar" [src]="domSanitizer.bypassSecurityTrustUrl(avatar)" />
+                                </ion-avatar>
+                            </ion-col>
+                            <ion-col>
+                                <ion-row>
+                                    <h2>{{user.name}}</h2>
+                                </ion-row>
+                                <ion-row>
+                                    <p>{{tenant.name}}</p>
+                                </ion-row>
+                                <ion-row>
+                                    <p>{{user.email}}</p>
+                                </ion-row>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+        
+                <ion-list>
+                    <button menuClose detail-none ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                        <ion-icon [name]="p.iconSrc" item-start></ion-icon>
+                        {{p.title | translate}}
+                    </button>
+                </ion-list>
+            </ion-content>
+</ng-template>
+
+<ion-nav #content [root]="rootPage"></ion-nav>

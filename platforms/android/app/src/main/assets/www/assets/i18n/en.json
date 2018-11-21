@@ -1,0 +1,314 @@
+{  
+  "APP_NAME": "Smart Test Drive",
+  "APP_NATION_NAME": "Saudi Arabia",
+  "APP_VERSION": "v1.0",
+  "BACK_BUTTON_TEXT": "Back",
+  "KM_MILE":"km",
+
+  "NAME": "Name",
+  "TENANCYNAME": "Code",
+  "EMAIL": "Email",
+  "USERNAME": "Username",
+  "PASSWORD": "Password",
+  "LOGIN": "Sign in",
+  "SIGNUP": "Sign up",
+  "menu": {
+    "home": "Home",
+    "test_drive_reservation": "Test Drive Reservation",
+    "test_drive": "Test Drive",
+    "cs_survey": "CS Survey",
+    "vehicle_health_check": "Vehicle Health Check",
+    "vehicle_list": "Vehicle List",
+    "setting": "Setting",
+    "manual": "Manual",
+    "logout": "Log Out"
+  },
+  "tabs_page": {
+    "tab1": {
+      "title": "Home"
+    },
+    "tab2": {
+      "title": "Reservation"
+    },
+    "tab3": {
+      "title": "Test Drive"
+    },
+    "tab4": {
+      "title": "Survey"
+    }
+  },
+  "GEO_TITLE": "GPS TEST",
+  "MAP_TITLE": "Map",
+  "TUTORIAL_SKIP_BUTTON": "Skip",
+  "TUTORIAL_CONTINUE_BUTTON": "Continue",
+  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Ionic Super Starter",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+  "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
+  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the Super Starter README for a full tutorial",
+  "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
+  "WELCOME_INTRO": "The starting point for your next great Ionic app",
+  "SETTINGS_TITLE": "Settings",
+  "SETTINGS_OPTION1": "Option 1",
+  "SETTINGS_OPTION2": "Option 2",
+  "SETTINGS_OPTION3": "Option 3",
+  "SETTINGS_OPTION4": "Option 4",
+  "SETTINGS_PROFILE_BUTTON": "Edit Profile",
+  "SETTINGS_LOGOUT_BUTTON": "Logout",
+  "SETTINGS_PASSWORD_BUTTON": "Change Password",
+  "SETTINGS_PAGE_PROFILE": "Account Setting",
+  "TAKE_PHOTO": "Take Photo",
+  "SETTINGS_LOGOUT": "Logout",
+  "WELCOME_TITLE": "Welcome",
+  "LOGIN_TITLE": "Sign in",
+  "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again.",
+  "LOGIN_BUTTON": "Sign in",
+  "SIGNUP_TITLE": "Sign up",
+  "SIGNUP_ERROR": "Unable to create account. Please check your account information and try again.",
+  "SIGNUP_BUTTON": "Sign up",
+  "TESTDRIVEREADY_TITLE": "Test Drive Ready",
+  "TESTDRIVERECORD_TITLE": "Test Drive Record",
+  "TESTDRIVERESULT_TITLE": "Test Drive Result",
+  "CSSURVEY_TITLE": "CS Survey",
+  "VEHICLELIST_TITLE": "Vehicle List",
+  "ENDTESTDRIVE_CONFIRM": "Are you sure you want to exit the test drive? <br> Only press OK when the test is complete.",
+  "DOCUMENT_TITLE": "Test Drive Document",
+  "REMINDER_TITLE": "Reminder",
+  "VEHICLE_HEALTH_CHECK_TITLE": "Vehicle Health Check",
+  "VEHICLE_REGISTRATION_TITLE": "Vehicle Registration",
+
+  "MANUAL_TITLE": "Manual",
+  "REPAIR": "Repair",
+  "ON_THE_ROAD": "On the Road",
+  "WAITING": "Waiting",
+
+
+  "LIST_MASTER_TITLE": "Smart Test Drive",
+  "ITEM_CREATE_TITLE": "New Item",
+  "ITEM_CREATE_CHOOSE_IMAGE": "Add Image",
+  "ITEM_NAME_PLACEHOLDER": "Name",
+  "ITEM_ABOUT_PLACEHOLDER": "About",
+  "DONE_BUTTON": "Done",
+  "CANCEL_BUTTON": "Cancel",
+  "DELETE_BUTTON": "Delete",
+  "SAVE_BUTTON": "Save",
+  "OK_BUTTON": "OK",
+  "YES_BUTTON": "Yes",
+  "NO_BUTTON": "No",
+  "CLOSE_BUTTON": "Close",
+  "SEARCH_BUTTON": "Search",
+  "BEGIN_SHOOTING_BUTTON": "Begin shooting",
+  "CARDS_TITLE": "Social",
+  "RESERVATION_LIST_TITLE": "Reservation List",
+  "SEARCH_PLACEHOLDER": "Sales Consultant, Customer, Vehicle Search.",
+  "vehicle": {
+    "photo_upload": {
+      "title": "Photo Upload",
+      "guide": {
+        "front": {
+          "line1": "차량 번호판을",
+          "line2": "강조해서 촬영해주세요"
+        },
+        "rear": {
+          "line1": "측면 데칼을",
+          "line2": "강조해서 촬영해주세요"
+        }
+      }
+    }
+  },
+  "reservation": {
+    "status": {
+      "Appointment" : "Upcoming",
+      "NoShow": "No Show",
+      "CheckIn": "Ready",
+      "Driving": "In Progress",
+      "Done": "Completed",
+      "Expired": "Expired",
+      "Canceled": "Canceled"
+    },
+    "this_time_slot_cannot_selected": "this time slot cannot selected",
+    "you_can_only_proceed_with_your_reservation":"You can only proceed with your reservation.",
+    "validation":{
+      "term_of_service_message": "Without your agreement with the Terms of Service, you cannot submit your application."
+    }
+  },
+  "survey_detail": {
+    "title": "CS Survey"
+  },
+  "CURRENT_PASSWORD": "Current Password",
+  "NEW_PASSWORD": "New Password",
+  "CONFIRM_PASSWORD": "Confirm Password",
+
+  "RESERVATION_TITLE": "Test Drive Reservation",
+  "RESERVATION_DATE": "Reservation Date",
+  "VEHICLE_NAME": "Vehicle",
+  "SELECT_A_VEHICLE": "Select a vehicle",
+  "CUSTOMER_NAME": "Customer Name",
+  "PHONE_NO": "Phone No",
+  "RECOMMENDER": "Recommender",
+  "CANCEL_RESERVATION_BUTTON": "Cancel Reservation",
+  "ARE_YOU_SURE_YOU_WANT_TO_MAKE_A_RESERVATION": "Are you sure you want to make a reservation?",
+  "YOUR_RESERVATION_WAS_MADE_OR_WAS_CHANGED_SUCCESSFULLY": "Your reservation was made or was changed successfully.",
+  "YOUR_RESERVATION_HAS_BEEN_CHANGED_DO_YOU_WANT_TO_SAVE_IT": "Your reservation has been changed. Do you want to save it?",
+  "ARE_YOUR_SURE_YOU_WANT_TO_CANCEL_THIS_RESERVATION": "Are you sure you want to cancel this reservation?",
+  "YOUR_RESERVATION_WAS_CANCELED_SUCCESSFULLY": "Your reservation was canceled successfully.",
+
+  "ADD_VEHICLE_BUTTON": "Add Vehicle",
+  "SELECT_VEHICLE_BLUETOOTH": "Select vehicle Bluetooth",
+  "VEHICLE_MODEL": "Vehicle Model",
+  "SELECT_A_BLUETOOTH_AUDIO_DEVICE_INSTALLED_ON_THE_VEHICLE": "Select a Bluetooth audio device installed on the vehicle.",
+  "SELECT_A_VEHICLE_MODEL": "Select a vehicle model",
+  "SELECT_A_YEAR": "Select a Year",
+  "SELECT_A_TRIM": "Select a Trim",
+  "PLATE_NUMBER": "Plate Number",
+  "MODEL_YEAR": "Model Year",
+  "TRIM": "Trim",
+  "INITIAL_OPERATING_DISTANCE": "Initial operating distance",
+  "FRONT_SIDE": "Front side",
+  "SIDE": "Side",
+  "TEST_VEHICLE_SELECT": "Test Vehicle Select",
+  "COMMENT": "COMMENT",
+  "CHECK_DATE": "Check Date",
+  "SALES_CONSULTANT": "Sales Consultant",
+  "msg": {
+    "confirm_title": "Confirm",
+    "file_upload_failed": "Failed to upload file",
+    "file_download_failed": "Failed to download file",
+    "unhandled_error": "Unexpected error happened",
+    "login": "Signing in",
+    "your_password_have_change": "Your password have change.",
+    "save_successful": "Save successful",
+    "are_you_sure_you_want_to_save": "Are you sure you want to save?",
+    "file_not_found": "File not found",
+    "unable_to_take_photo": "Unable to take photo",
+    "connect_success": "Connect Success",
+    "vehicle_is_updated": "Vehicle is updated",
+    "vehicle_is_registered": "Vehicle is registered",
+    "are_you_sure_you_want_to_change_password": "Are you sure you want to change password",
+    "bluetooth": "Bluetooth",
+    "bluetooth_is_off_do_you_want_to_proceed_anyway": "Bluetooth is off. Do you want to proceed anyway?",
+    "connecting_to_bluetooth_device": "Connecting to Bluetooth device...",
+    "gps": "GPS",
+    "access_to_location_services_is_denied": "Access to location services is denied. Please turn location services on in settings and try again.",
+    "receiving_geolocation": "Receiving GPS signals",
+    "please_check_gps_permission": "Please Check GPS Permission",
+    "available_gps": "available gps",
+    "please_turn_on_your_bluetooth": "Please turn on your bluetooth",
+    "uploading_images": "Uploading images...",
+    "cannot_get_your_location": "Cannot retrieve your current location. Please check location setting and try again",
+    "background_location_failed": "Failed to retrieve location. Retrying...",
+    "failed_to_get_record_session": "Failed to get record sessions",
+    "failed_to_create_driving_record": "Failed to create driving Records",
+    "failed_to_finish_record": "Failed to finish record",
+    "there_are_no_pictures": "There are no pictures",
+    "loading": "Loading ...",
+    "please_select_a_vehicle_model_first": "Please select a vehicle model first.",
+    "please_select_a_vehicle_model_and_an_year_first": "Please select a vehicle model and an year first.",
+    "posting_test_drive_result": "Saving test drive result...",
+    "finishing_driving_record": "Finishing driving record",
+    "press_ok_when_you_are_ready": "Press Ok when you are ready to start",
+    "failed_to_end_driving_record": "Failed to end driving record",
+    "it_take_too_much_time_keep_waiting": "It takes too much time. Keep waiting or not ?",
+    "location_service_required": "To use this application, you should turn location service on in the Settings. Please try again after turn on location service."
+  },
+  "DELETE_CAMERA_IMAGE": "Are you want to delete this image?",
+  "card": {
+    "likes": "Likes",
+    "comments": "Comments",
+    "ago": "ago"
+  },
+  "survey": {
+    "customer": "Customer"
+  },
+  "document": {
+    "tap_here_to_capture_drivers_license": "Tap here to capture Drivers License",
+    "customer_infomation": "Customer Infomation",
+    "gender": "Gender",
+    "name": "Name",
+    "phone_no": "Phone No",
+    "email": "Email",
+    "test_vehicle": "Test Vehicle",
+    "terms_of_service": "Terms of Service",
+    "term_agree_1": "By providing your personal detail you consent to the collection use and disclosure of my personal information in line with the company privacy statement.",
+    "term_agree_2": "I agree to Hyundai Motor Company Pty Limited to send me the latest update, news and offers.",
+    "signature": "Signature",
+    "customer_signature": "Customer Signature",
+    "date_signed": "Date signed",
+    "sales_consultants_signature": "Sales Consultants Signature",
+    "male": "Male",
+    "female": "Female"
+  },
+  "home": {
+    "total_vehicles": "Total Vehicles",
+    "on_the_road": "On the Road",
+    "waiting": "Waiting",
+    "vehicle_on_the_road": "Vehicle On the Road",
+    "the_test_vehicle_is_not_in_use": "The test vehicle is not in use",
+    "vehicle_waiting": "Vehicle Waiting",
+    "vehicles": "Vehicles",
+    "today_reservation": "Today Reservation",
+    "there_are_no_vehicles_waiting": "There are no vehicles waiting"
+  },
+  "reservation_list": {
+    "today": "Today",
+    "assigned_to": "Assigned to",
+    "drive_start": "Drive<br />Start"
+  },
+  "settings": {
+    "auto_start": "Auto Start",
+    "prevent_screen_from_sleeping": "Prevent Screen From Sleeping",
+    "change_profile_picture": "Change Profile Picture",
+    "change_password": "Change Password",
+    "logout": "Logout"
+  },
+  "splash": {
+    "hyundai": "Hyundai",
+    "driving_experience": "Driving Experience",
+    "smart_test_drive": "Smart Test Drive"
+  },
+  "test_drive": {
+    "get_in_the_test_vehicle": "Get in the Test Vehicle",
+    "start_the_engine": "start the engine.",
+    "reselection": "Reselection",
+    "bluetooth_connection_required": "Bluetooth connection required",
+    "bluetooth_established_test_drive_start_soon": "Bluetooth connection is established successfully. Test driving will be started soon",
+    "driving": "Driving",
+    "paused": "Paused",
+    "end": "End",
+    "the_vehicle_departed_at": "The vehicle departed at",
+    "driving_time": "Driving Time",
+    "total_distance": "Total Distance",
+    "km": "km",
+    "connection_failed_to": "Connection failed to",
+    "tried_to_connect_to": "Tried to connect to",
+    "but_failed": "but failed",
+    "reason": "Reason",
+    "do_you_want_to_proceed_anyway": "Do you want to proceed anyway?",
+    "test_drive": "Test Drive",
+    "continue": "Continue",
+    "finish": "Finish",
+    "drive_finish": "Click here to Finish",
+    "exit_test_drive_title_first_line": "Are you sure you want to exit the test drive?",
+    "exit_test_drive_title_second_line": "Only press OK when the test is complete.",
+    "exit_test_drive_subtitle": "In the case of a temporary stop, Press CANCEL to return to the previous screen"
+  },
+  "vehicle_health_check": {
+    "upload_photos": "Upload photos"
+  },
+  "vehicle_registration": {
+    "scanning_bluetooth_devices": "Scanning bluetooth devices...",
+    "no_bluetooth_device_found": "No bluetooth device found",
+    "anonymous_device": "Anonymous Device",
+    "activate_the_bluetooth_add_on_status_in_the_bluetooth_setting": "Activate the Bluetooth add-on status in the Bluetooth settings of the vehicle.<br /><br />When you are ready, press OK."
+  },
+  "UPLOAD_DATA_LOADING": "Uploading...",
+  "drive_shooting": {
+    "total_mileage": "Total mileage",
+    "highlight_and_shoot": "Highlight and shoot",
+    "please_take_a_picture_of_the_front_of_the_vehicle": "Please take a picture of the front of the vehicle",
+    "please_take_a_picture_of_the_side_of_the_vehicle": "Please take a picture of the side of the vehicle",
+    "please_make_sure_the_license_plate_is_clearly_visible": "Please make sure the license plate is clearly visible",
+    "please_take_a_picture_so_that_the_decal_looks_good": "Please take a picture so that the decal looks good"
+  }
+}

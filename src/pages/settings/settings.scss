@@ -1,0 +1,41 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+page-settings {
+	.icon_h { font-family:'sampleIcon'; font-size:24px; font-style: normal; }
+	.label-md, .label-ios { margin: 16px 8px 16px 0; }
+	.list-ios > .item-block:first-child { border-top-color: transparent; }
+
+	.profile-Picture { position: relative;
+		.item { width: auto !important; background-color: transparent;
+			.label-md, .label-ios { margin: 0; } 
+		}
+		ion-avatar { position: relative; width: 180px; height: 180px; border-radius: 50%; background-color: rgba(255,255,255,.6); overflow: hidden; text-align: center;
+		img { @include position-full(); display: block; margin: auto; width: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: 0; }
+		&:before { display: flex; @extend .icon_h; content:'\004C'; min-height: 100%; font-size: 8.0rem; line-height: 53px; color: $color-grey-basic; align-items: center; align-content: center; justify-content: center; }
+		}
+		> .icon { @include right-top(10px,10px); font-size: 3.0rem; color: $color-hd-blue;
+			&:before { width: 30px; height: 30px; }
+		}
+		> .row { margin: -20px; padding: 40px 0; background-color : $color-hd-lightsand; }
+		.default-button-group { margin-top: 40px; }
+
+		@media (max-width:900px) and (orientation:landscape) { 
+			> .row { padding: 20px 0; }
+			.default-button-group { margin-bottom: 0px; }
+		}
+		@media (max-width:767px) and (orientation:landscape) { 
+			> .row { padding: 30px 0; }
+			.default-button-group { margin-bottom: 0px; } 
+		}
+		@media (max-width:667px) and (orientation:landscape) { 
+			> .row { padding: 20px 0; }
+			.default-button-group { margin-bottom: 0px; } 
+		}
+		@media (max-width:640px) and (orientation:landscape) { 
+			> .row { padding: 10px 0; }
+			.default-button-group { margin-bottom: 0px; } 
+		}
+	}
+
+}

@@ -1,0 +1,210 @@
+// http://ionicframework.com/docs/v2/theming/
+@import "../theme/icons";
+// App Global Sass
+// --------------------------------------------------
+/// Hyundai font path
+@import "../assets/css/testdriveicon";
+@import "../assets/css/hyundai_font";
+
+/// import common 
+@import "../assets/css/_variables";
+@import "../assets/css/utilities";
+@import "../assets/css/common";
+
+/// reset
+.font-heading { font-family: $font-heading; font-weight: inherit; }
+ion-app {
+    &, &.ios, &.md  { font-family: $font-family-base; font-size: $font-size-base; 
+        [padding] {
+            .scroll-content { padding: $content-padding-s; }
+        }
+    }
+}
+
+input.text-input { 
+    @include rtl() { text-align: right; } 
+}
+
+[lightsand] { background-color: $color-hd-lightsand; }
+
+.button {
+    &-md, &-ios { background-color: $color-hd-blue; font-family: $font-text-m; font-size: $font-size-sm; @include border-radius(0);
+        &.button-clear-ios, &.button-clear-md { background-color: transparent; color: $color-hd-blue; }
+        &-light { background-color: $color-grey-basic; color: white; }
+    }
+    &-md { height: 4.4rem; text-transform: inherit; }
+}
+
+.list {
+    &-md, &-ios {
+        .item {
+            &, &-md, &-ios { padding-left: $sm; padding-right: $sm; }
+        }
+    }
+    &-md { 
+        .item-input {
+            &.item-input-has-focus, &.input-has-focus {
+                &:last-child {
+                  border-bottom-color: $color-hd-activeblue;
+                  -webkit-box-shadow: inset 0 -1px 0 0 $color-hd-activeblue;
+                  box-shadow: inset 0 -1px 0 0 $color-hd-activeblue;
+                }
+            }
+        }
+    }
+}
+
+.item {
+    &, &-md, &-ios { @include padding(0, $sm); 
+        &.item-input {
+            &.item-input-has-focus, .input-has-focus {
+                .item-inner { 
+                  border-bottom-color: $color-hd-activeblue;
+                  -webkit-box-shadow: inset 0 -1px 0 0 $color-hd-activeblue;
+                  box-shadow: inset 0 -1px 0 0 $color-hd-activeblue;
+                }
+            }
+        }
+        &.item-block { 
+            .item-inner { @include padding(null, 0); } 
+        }
+    }
+    &-input, &-select, &-datetime {
+        .label-md { color: #000; }
+    }
+}
+
+.item-input-has-focus, .input-has-focus {
+    .label {
+        &-md, &-ios {
+            &[stacked], &[floating] { color: $color-hd-activeblue; }
+        }
+    }
+}
+
+.label {
+    &-md, &-ios { margin: 10px 8px 10px 0; 
+        &[stacked] { margin-top: 13px; }
+    }
+}
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, 
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom-color: #dedede; box-shadow: none; color: $color-grey-basic;
+}
+
+.item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, 
+.item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  color: $color-grey-basic;
+}
+
+.select-text { letter-spacing: -0.7px; }
+
+.icon {
+  &-ios {
+    &[name="md-close"] { font-size: 1.4em; color: $color-icon; }
+  }
+  &-md {
+    &[name="md-close"] { font-size: 1.6em; color: $color-icon; }
+  }
+}
+
+.select {
+    &-md, &-ios {
+        .select-icon { @include margin(null, null, null, 8px); 
+            .select-icon-inner { @include position(null, null, null, 0px); }
+        }
+    }
+    &-md .select-icon .select-icon-inner { margin-top: -2px; }
+    &-ios .select-icon .select-icon-inner { margin-top: -1px; }
+}
+
+.header { 
+  &-md {
+    &:after { background-image: none; }
+  }
+  .toolbar {
+    &-ios { min-height: 56px; 
+      &:not(.head-nav-bar) { 
+        .bar-buttons-ios { margin-right: 4px; order: 4; 
+          + .toolbar-content-ios { order: 3; }
+        }
+      }
+    }
+    &-background {
+      &-md, &-ios {
+        background-color: $color-hd-lightsand; border-color: $color-hd-sand;
+      }
+      &-md { border-bottom-width: 1px; border-bottom-style: solid; }
+    }
+  }
+}
+
+/// layout
+// Common toolbar
+.head-nav-bar { min-height: $topbar-height; height: $topbar-height; 
+    &.toolbar-ios, &.toolbar-md { @include padding(null, 4px, null, 15px); @include box-shadow(4px, 0.3, 0, 1px); }
+    .toolbar-background { background-color: $topbar-color !important; border: 0 !important; }
+    .top-logo { display: inline-block; width: 35px; vertical-align: middle;
+        &:before { font-size: 35px; }
+    }
+    .toolbar-content { display: flex; }
+    .header-title { text-align: center; 
+        &:not(.title-ios) { @include left-top(80px, 0); right: 80px; padding: 0 0 1px; height: 100%; }
+        > div { @extend .font-heading; margin-top: 1px; font-size: $font-size-sm; }
+        .toolbar-title-md { padding: 0; }
+    }
+    .menu-toggle { color: $color-icon; 
+        &:before { font-size: 26px; width: 24px; height: 24px; }
+    }
+    .notifications { color: $color-icon;
+        &:before { font-size: 22px; width: 24px; height: 24px; }
+        .badge { @include right-top(1px, 0px); @include circle(16px); padding: 0; font-size: 1.1rem; line-height: 16px; background-color: $color-hd-activeblue; 
+            @include rtl() { left: 1px; right: inherit; }
+        }
+    }
+    .bar-button { color: $color-icon; }
+    .back-button { margin: 0; padding: 0; min-width: inherit;
+        .back-button-icon { padding: 0; 
+            &:before { margin-bottom: 2px; @extend .icon_h; content:'\005A'; font-size: 2.0rem !important; }
+            &.icon-ios:before { margin-bottom:0; }
+        }
+        .back-button-text { display: none; }
+    }
+}
+.bottom-menu-bar { 
+    .tabbar { height: $bottombar-height; background-color: $bottombar-color !important; border: 0 !important;
+        .tab-button { min-height: $bottombar-height; 
+            &-icon { font-size: 24px; color: rgba(34,24,20,.7); 
+                &.ion-ios-icon_guage, &.ion-ios-icon_guage-outline, &.ion-md-icon_guage, &.ion-md-icon_guage-outline {
+                    &:before { font-size: 28px; }
+                }
+            }
+        }
+        .tab-button {
+            &-text { font-size: 11px; font-family: $font-menu-text; color: rgba(0,0,0,.7); }
+            &[aria-selected=true] {
+                .tab-button-icon { color: #000; }
+                .tab-button-text { color: $color-icon-text; }
+            }
+        }
+    }
+}
+.default-button-group { margin: $leave-space-large 0; @include padding(0); 
+    .row { margin-left: -5px; margin-right: -5px; }
+}
+.modal-header { flex-basis: 56px !important; border-bottom: 1px solid $color-hd-sand; }
+.box-point { display: inline-block; margin-left: 5px; min-width: 28px; height: 16px; background-color: $color-grey-dark; color: white; font-family: $font-text-m; font-size: 13px; @include round(8px); text-align: center; vertical-align: middle; 
+    &:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
+}
+.alert-md .alert-radio-icon { 
+    @include rtl() { right: 13px; }
+}
+
+.full-modal .modal-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0;
+}

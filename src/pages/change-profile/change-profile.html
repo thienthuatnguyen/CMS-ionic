@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar class="head-nav-bar">
+    <button end ion-button menuToggle>
+      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+    </button>   
+    <ion-title class="header-title">{{ 'SETTINGS_PAGE_PROFILE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-grid text-center class="profile-Picture">
+        <ion-icon name="add-circle" (click)="changeAvatar()"></ion-icon>
+        <ion-row align-items-center justify-content-center>
+          <ion-item no-lines style="width:100px">
+            <ion-avatar>
+              <img (click)="changeAvatar()" [src]="domSanitizer.bypassSecurityTrustUrl(Pictures?.url)" />
+            </ion-avatar>
+          </ion-item>
+        </ion-row>  
+        <ion-grid class="default-button-group">
+          <ion-row>
+            <ion-col>
+              <button ion-button full color="light" (click)="cancel()">{{ 'CANCEL_BUTTON' | translate }}</button>
+            </ion-col>
+            <ion-col>
+              <button ion-button full (click)="submitSave()">{{ 'SAVE_BUTTON' | translate }}</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-grid>
+</ion-content>

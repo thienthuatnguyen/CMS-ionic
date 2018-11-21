@@ -1,0 +1,37 @@
+export class VehicleDriverModel {
+        id: any;
+        tenantId: any
+        vehicleTypeSegmentId: any;
+        modelYearSegmentId: any;
+        trimSegmentId: any;
+        vehicleTypeDisplayName: string;
+        modelYearDisplayName: string;
+        trimDisplayName: string;
+        licensePlateNo: string;
+        pairedDeviceId: string;
+        pairedDeviceDisplayName: string;
+        vehicleFrontSidePictureId: string;
+        vehicleSidePictureId: string;
+        vehicleDrivingStatusEnum: string;
+        initialMileage: string;
+        drivenMileage: any;
+        drivenDurationInSec: any;
+        assignmentCount: any;
+        currentLatitude: any;
+        currentLongitude: any;
+        currentFullAddress: string;
+        vehicleDisplayName: string;
+        customerSalutationEnum: string;
+        customerFullName: string;
+        customerPhoneNumber: string;
+        customerEmailAddress: string;
+        recommenderFullName: string;
+        appointmentFromDateTimeLocal: string;
+        appointmentToDateTimeLocal: string;
+        applicationStatusEnum: string;
+        consultantUserId: string;
+        consultantUserName: string;
+        consultantProfilePictureId: string;
+        creationTime: string;
+        todayReservationCount: any;
+}

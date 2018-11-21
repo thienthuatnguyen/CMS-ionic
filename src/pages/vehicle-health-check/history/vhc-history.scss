@@ -1,0 +1,124 @@
+.popup-vehicle 
+{
+    .popup-vehicle-img {
+        width: 200px;
+        height: 200px;
+    }
+    ion-textarea .input-cover {
+		display: none;
+	}
+    .no-image {
+        height: 206px;
+        position: relative;
+    }
+    .no-image:after {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        content: "\f103";
+        width: 100%;
+        height: 100%;
+        font-family: "Ionicons";
+        font-size: 52px;
+        color: #7F7F7F;
+        background-color: #e0e0e0;
+      }
+    .wrapper-slider {
+        position: relative;
+        min-height: 206px;
+    }
+    .header-popup {
+        position: relative;
+        padding-top: 20px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    button.btn-close-popup{
+        background-color: transparent;
+        position: absolute;
+        right: -10px;
+        top: 5px;
+        z-index: 100;
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        background-color: #616161;
+        border-radius: 50%;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        ion-icon {
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+    .content-popup {
+        padding: 0px 15px 15px 15px;
+        position: relative;
+    }
+    background-color: rgba(0,0,0,0.8);
+    .info {
+        .date {
+            display: inline-block;
+            width: auto;
+            margin-right: 15px;
+        }
+    }
+    .modal-wrapper{
+        height: 399px;
+        
+        .scroll-content {
+            padding-bottom: 0px !important;
+            overflow-y: hidden;
+        }
+    }
+    vhc-history {
+        padding: 0 15px;
+        left: 15px;
+        right: 15px !important;
+        width: auto;
+        .btn-slider {
+            z-index: 1000;
+            position: absolute;
+            top: 50%;
+            margin-top: -21px;
+            background-color: transparent;
+            ion-icon {
+                font-size: 40px;
+            }
+        }
+        .next-slider {
+            right: 15px;
+
+            @include rtl() { 
+                right: initial;
+                left: 15px;
+             }
+        }
+        .prev-slider {
+            left: 15px;
+
+            @include rtl() { 
+                left: initial;
+                right: 15px;
+             }
+        }
+    }
+    .comment {
+        background-color: #f2f2f2;
+        padding: 5px 10px;
+        border-radius: 10px;
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        margin-top: 10px;
+    }
+}

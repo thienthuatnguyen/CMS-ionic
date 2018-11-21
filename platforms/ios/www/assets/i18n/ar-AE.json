@@ -1,0 +1,326 @@
+{
+  "APP_NAME": "تجربه قياده ذكيه",
+  "APP_NATION_NAME": "Saudi Arabia",
+  "APP_VERSION": "v1.0",
+  "BACK_BUTTON_TEXT": "رجوع",
+  "KM_MILE": "كيلو متر ",
+
+
+  "NAME": "الاسم",
+  "TENANCYNAME": "الكود",  
+  "EMAIL": "ايميل",
+  "USERNAME": "اسم المستخدم",
+  "PASSWORD": "كلمة السر",
+  "LOGIN": "الدخول",
+  "SIGNUP": "التسجيل",
+  "LANGUAGE": "لغة",
+
+  "menu": {
+    "home": "اختبار",
+    "test_drive_reservation": "حجز تجربه القياده",
+    "test_drive": "تجربه القياده",
+    "cs_survey": "استبيان خدمه العملاء",
+    "vehicle_health_check": "فحص حاله السيارة",
+    "vehicle_list": "قائمه السيارات",
+    "setting": "ضوابط",
+    "manual": "استخدام يدوي",
+    "logout": "خروج"
+  },  
+  
+
+
+  "tabs_page": {
+    "tab1": {
+      "title": "الصفحة الرئيسية"
+    },
+    "tab2": {
+      "title": "الحجز"
+    },
+    "tab3": {
+      "title": "تجربه القياده"
+    },
+    "tab4": {
+      "title": "استبيان"
+    }
+  },
+  "GEO_TITLE": "تجربه نظام الملاحه",
+  "MAP_TITLE": "الخريطه",
+  "TUTORIAL_SKIP_BUTTON": "حذف",
+  "TUTORIAL_CONTINUE_BUTTON": "استمرار",
+  "SETTINGS_TITLE": "الضوابط",
+  "SETTINGS_OPTION1": "اختيار 1",
+  "SETTINGS_OPTION2": "اختيار 2",
+  "SETTINGS_OPTION3": "اختيار 3",
+  "SETTINGS_OPTION4": "اختيار 4",
+  "SETTINGS_PROFILE_BUTTON": "تعديل الملف الشخصي",
+  "SETTINGS_LOGOUT_BUTTON": "خروج",
+  "SETTINGS_PASSWORD_BUTTON": "تغير كلمه السر",
+  "SETTINGS_PAGE_PROFILE": "ضوابط الحساب",
+  "PHOTO": "صور",
+  "TAKE_PHOTO": "خذ صور",
+  "SETTINGS_LOGOUT": "خروج",
+  "WELCOME_TITLE": "مرحبا",
+  "LOGIN_TITLE": "تسجيل الدخول",
+  "LOGIN_ERROR": "غير قادر على تسجيل الدخول. يرجى التحقق من معلومات حسابك والمحاولة مرة أخر",
+  "LOGIN_BUTTON": "الدخول",
+  "SIGNUP_TITLE": "التسجيل",
+  "SIGNUP_ERROR": "غير قادر على إنشاء حساب. يرجى التحقق من معلومات حسابك والمحاولة مرة أخرى",
+  "SIGNUP_BUTTON": "التسجيل",
+  "TESTDRIVEREADY_TITLE": "مستعد لتجربه القياده",
+  "TESTDRIVERECORD_TITLE": "تسجيل تجربه القياده",
+  "TESTDRIVERESULT_TITLE": "نتائج تجربه القياده",
+  "CSSURVEY_TITLE": "خدمه العملاء",
+  "VEHICLELIST_TITLE": "قائمه السيارات",
+  "ENDTESTDRIVE_CONFIRM": "هل انت من متأكد من انهاء تجربه القياده",
+  "DOCUMENT_TITLE": "مستندات  المطلوبه عند تجربه القياده",
+  "REMINDER_TITLE": "تذكير",
+  "VEHICLE_HEALTH_CHECK_TITLE": "فحص حاله السيارة",
+  "VEHICLE_REGISTRATION_TITLE": "قائمه السيارات",
+
+  "MANUAL_TITLE": "ضوابط",
+  "REPAIR": "استخدام يدوي",
+  "ON_THE_ROAD": "علي الطريق",
+  "WAITING": "انتظار",
+
+
+  "LIST_MASTER_TITLE": "تجربه قياده ذكيه",
+  "ITEM_CREATE_TITLE": "اضافه جديده",
+  "ITEM_CREATE_CHOOSE_IMAGE": "اضافه صور",
+  "ITEM_NAME_PLACEHOLDER": "الاسم",
+  "ITEM_ABOUT_PLACEHOLDER": "عن",
+  "DONE_BUTTON": "تمت",
+  "CANCEL_BUTTON": "الغاء",
+  "DELETE_BUTTON": "مسح",
+  "SAVE_BUTTON": "حفظ",
+  "OK_BUTTON": "حسنا",
+  "YES_BUTTON": "نعم",
+  "NO_BUTTON": "لا",
+  "CLOSE_BUTTON": "اغلاق",
+  "SEARCH_BUTTON": "بحث",
+  "BEGIN_SHOOTING_BUTTON": "ابدأ التصوير",
+  "CARDS_TITLE": "اجتماعي",
+  "RESERVATION_LIST_TITLE": "قائمه الحجوزات",
+  "SEARCH_PLACEHOLDER": "مستشار المبيعات ، العميل ، البحث عن المركبات",
+  "vehicle": {
+    "photo_upload": {
+      "title": "تحميل الصور",
+      "guide": {
+        "front": {
+          "line1": "من فضلك التقط صوره من امام السياره",
+          "line2": "(يرجى التأكد من أن لوحة الترخيص مرئية بوضوح"
+        },
+        "rear": {
+          "line1": "من فضلك التقط صوره من جانب السياره",
+          "line2": "يرجى التقاط صورة بحيث تبدو الشارات جيدة"
+        }
+      }
+    }
+  },
+  "reservation": {
+    "status": {
+      "Appointment" : "التالي",
+      "NoShow": "لم يظهر",
+      "CheckIn": "جاهز",
+      "Driving": "قيد العمل",
+      "Done": "تم",
+      "Expired": "منتهي الصلاحيه",
+      "Canceled": "الغاء"
+    },
+    "this_time_slot_cannot_selected": "لا يمكن اختيار هذه الفترة الزمنية",
+    "you_can_only_proceed_with_your_reservation":"يمكنك فقط متابعة الحجز الخاص بك.",
+    "validation":{
+      "term_of_service_message": "بدون موافقتك على شروط الخدمة ، لا يمكنك إرسال طلبك"
+    }
+  },
+  "survey_detail": {
+    "title": "استبيان خدمه العملاء"
+  },
+  "CURRENT_PASSWORD": "كلمه المرور الحاليه",
+  "NEW_PASSWORD": "كلمه المرورالجديده",
+  "CONFIRM_PASSWORD": "تأكيد كلمه المرور",
+
+  "RESERVATION_TITLE": "حجز تجربه القياده",
+  "RESERVATION_DATE": "تاريخ الحجز",
+  "VEHICLE_NAME": "السياره",
+  "SELECT_A_VEHICLE": "اختيار نوع السياره",
+  "CUSTOMER_NAME": "اسم العميل",
+  "PHONE_NO": "رقم الهاتف",
+  "RECOMMENDER": "مرشح من قبل",
+  "CANCEL_RESERVATION_BUTTON": "الغاء الحجز",
+  "ARE_YOU_SURE_YOU_WANT_TO_MAKE_A_RESERVATION": "هل انت من متأكد من رغبتك في عمل حجز ؟",
+  "YOUR_RESERVATION_WAS_MADE_OR_WAS_CHANGED_SUCCESSFULLY": "تم إجراء الحجز الخاص بك أو تغييره بنجاح",
+  "YOUR_RESERVATION_HAS_BEEN_CHANGED_DO_YOU_WANT_TO_SAVE_IT": "تم  تغيير الحجز الخاص بك. هل تريد حفظه؟",
+  "ARE_YOUR_SURE_YOU_WANT_TO_CANCEL_THIS_RESERVATION": "هل أنت متأكد من أنك تريد إلغاء هذا الحجز؟",
+  "YOUR_RESERVATION_WAS_CANCELED_SUCCESSFULLY": "تم إلغاء الحجز الخاص بك بنجاح.",
+
+  "ADD_VEHICLE_BUTTON": "اضافه سياره",
+  "SELECT_VEHICLE_BLUETOOTH": "اختر سيارة بلوتوث",
+  "VEHICLE_MODEL": "موديل المركبة",
+  "SELECT_A_BLUETOOTH_AUDIO_DEVICE_INSTALLED_ON_THE_VEHICLE": "حدد جهاز صوت بلوتوث مثبت على السيارة",
+  "SELECT_A_VEHICLE_MODEL": "اختر نوع السياره",
+  "SELECT_A_YEAR": "اختر موديل العام",
+  "SELECT_A_TRIM": "اختر الفئه",
+  "PLATE_NUMBER": "رقم اللوحه",
+  "MODEL_YEAR": "السنه",
+  "TRIM": "الفئه",
+  "INITIAL_OPERATING_DISTANCE": "مسافة التشغيل الأولية",
+  "FRONT_SIDE": "الجانب الامامي",
+  "SIDE": "جانب",
+  "TEST_VEHICLE_SELECT": "اختيار السياره",
+  "COMMENT": "تعليق",
+  "CHECK_DATE": "اختر التاريخ",
+  "SALES_CONSULTANT": "مستشار المبيعات",
+  "msg": {
+    "app_is_downloading_and_updating":"...التطبيق هو تحميل وتحديث",
+    "to_continue_using_app_you_must_allow_app_to_access_photos_media_and_files_on_your_device": "لمتابعة استخدام التطبيق ، يجب السماح للتطبيق بالوصول إلى الصور والوسائط والملفات على جهازك",
+    "confirm_title": "تأكيد",
+    "file_upload_failed": "فشل تحميل الملف",
+    "file_download_failed": "فشل تنزيل الملف",
+    "unhandled_error": "عطل غير متوقع",
+    "login": "تسجيل الدخول",
+    "your_password_have_change": "كلمه المرور الخاصه بك قد تغيرت",
+    "save_successful": "تم الحفظ بنجاح",
+    "are_you_sure_you_want_to_save": "هل أنت متأكد أنك تريد الحفظ؟",
+    "file_not_found": "الملف غير موجود",
+    "unable_to_take_photo": "غير قادر علي التقاط الصور",
+    "connect_success": "تم الاتصال بنجاح",
+    "vehicle_is_updated": "تم تحديث معلومات السياره بنجاح",
+    "vehicle_is_registered": "تم تسجيل السياره بنجاح",
+    "are_you_sure_you_want_to_change_password": "هل  انت متأكد انك تريد تغير كلمه المرور",
+    "bluetooth": "بلو توث",
+    "bluetooth_is_off_do_you_want_to_proceed_anyway": "أجهزه البلوتوث مغلقه .هل تريد المتابعه ؟",
+    "connecting_to_bluetooth_device": "الاتصال بأجهزه البلوتوث",
+    "gps": "اجهزه الملاحه جي بي اس",
+    "access_to_location_services_is_denied": "تم رفض الوصول إلى خدمات الموقع. الرجاء تشغيل خدمات الموقع في الإعدادات وإعادة المحاولة.",
+    "receiving_geolocation": "تلقي تحديد الموقع الجغرافي",
+    "please_check_gps_permission": "من فضلك تأكد من عمل اجهزه الملاحه",
+    "available_gps": "انظمه الملاحه المتوفره",
+    "please_turn_on_your_bluetooth": "من فضلك شغل البلوتوث",
+    "uploading_images": "تحميل الصور",
+    "cannot_get_your_location": "لا يمكن استرداد موقعك الحالي. يرجى التحقق من إعداد الموقع والمحاولة مرة أخرى",
+    "background_location_failed": "فشل في استعادة الموقع. إعادة المحاولة ...",
+    "failed_to_get_record_session": "فشل الحصول على جلسات قياسية",
+    "failed_to_create_driving_record": "فشل إنشاء سجلات القيادة",
+    "failed_to_finish_record": "فشل إنهاء السجل",
+    "there_are_no_pictures": "لا توجد صور",
+    "loading": "جار التحميل...",
+    "please_select_a_vehicle_model_first": "يرجى تحديد طراز السيارة أولاً.",
+    "please_select_a_vehicle_model_and_an_year_first": "يرجى تحديد طراز السيارة والسنة الأولى.",
+    "posting_test_drive_result": "جارٍ حفظ نتيجة اختبار القيادة ...",
+    "finishing_driving_record": "الانتهاء من سجل القيادة",
+    "press_ok_when_you_are_ready": "اضغط على موافق عندما تكون مستعدًا للبدء",
+    "failed_to_end_driving_record": "فشل في إنهاء سجل القيادة",
+    "it_take_too_much_time_keep_waiting": "فإنه يأخذ الكثير من الوقت. استمر في الانتظار أم لا؟",
+    "location_service_required": "لاستخدام هذا التطبيق ، يجب عليك تشغيل خدمة الموقع في الإعدادات. يرجى المحاولة مرة أخرى بعد تشغيل خدمة الموقع.",
+    "network_disconnect_try_again": "اتصال الشبكة لديه مشكلة. يرجى التحقق من الشبكة والمحاولة مرة أخرى",
+    "force_update_later": "هناك تحديثات. هل تريد تثبيت التحديثات الآن؟",
+    "force_update_now": "هناك تحديثات. بدون تثبيت التحديث ، لا يمكنك استخدام الخدمة",
+    "later": "في وقت لاحق",
+    "confirm_update": "تأكيد التحديث",
+    "checkversion": "التحقق من الإصدار ..."
+  },
+  "DELETE_CAMERA_IMAGE": "هل تريد حذف هذه الصورة؟",
+  "card": {
+    "likes": "الاعجابات",
+    "comments": "التعليقات",
+    "ago": "من زمن"
+  },
+  "survey": {
+    "customer": "العميل"
+  },
+  "document": {
+    "tap_here_to_capture_drivers_license": "اضعط هنا لتصوير رخصه القياده",
+    "customer_infomation": "معلومات العميل",
+    "gender": "الجنس",
+    "name": "الاسم",
+    "phone_no": "رقم التليفون",
+    "email": "العنوان الالكتروني",
+    "test_vehicle": "سيارات تجربه القياده",
+    "terms_of_service": "شروط و احكام الخدمه",
+    "term_agree_1": "من خلال تقديم التفاصيل الشخصية الخاصة بك بخصوص الاستلام ةو الافصاح عن المعلومات الشخصيه تماشيا مع سياسه سريه معلومات الخاصه بالشركه",
+    "term_agree_2": "اوافق على شركة Hyundai Motor Company Pty Limited لترسل لي آخر التحديثات والأخبار والعروض.",
+    "signature": "التوقيع",
+    "customer_signature": "توقيع العميل",
+    "date_signed": "تاريخ التوقيع",
+    "sales_consultants_signature": "توقيع مستشار المبيعات",
+    "male": "الذكر",
+    "female": "إناثا"
+  },
+  "home": {
+    "total_vehicles": "اجمالي السيارات",
+    "on_the_road": "علي الطريق",
+    "waiting": "انتظار",
+    "vehicle_on_the_road": "سيارات علي الطريق",
+    "the_test_vehicle_is_not_in_use": "سياره اختبار القياده لاتعمل",
+    "vehicle_waiting": "انتظار السيارات",
+    "vehicles": "السيارات",
+    "today_reservation": "تم الحجز بتاريخ اليوم",
+    "there_are_no_vehicles_waiting": "لا توجد سيارات في الانتظار"
+  },
+  "reservation_list": {
+    "today": "اليوم",
+    "assigned_to": "مخصص ل",
+    "drive_start": "القياده<br />بدايه"
+  },
+  "settings": {
+    "auto_start": "البدايه الاتوماتيكيه",
+    "prevent_screen_from_sleeping": "منع الشاشه من  الاغلاق",
+    "change_profile_picture": "تغير صوره الملف الشخصي",
+    "change_password": "تغير كلمه المرور",
+    "select_language": "اختار اللغة",
+    "logout": "خروج"
+  },
+  "splash": {
+    "hyundai": "هيونداي",
+    "driving_experience": "تجربه القياده",
+    "smart_test_drive": "اختبار القياده الذكي"
+  },
+  "test_drive": {
+    "get_in_the_test_vehicle": "ادخل في سياره الاختبار",
+    "start_the_engine": "شغل المحرك",
+    "reselection": "اعاده الاختيار",
+    "bluetooth_connection_required": "مطلوب الاتصال باجهزه البلوتوث",
+    "bluetooth_established_test_drive_start_soon": "اتصال باجهزه البلوتوث تم بنجاح تجربه القياده ستبدأ بعد قليل",
+    "driving": "قياده",
+    "paused": "وقوف",
+    "end": "النهايه",
+    "the_vehicle_departed_at": "السيارة غادرت في",
+    "driving_time": "زمن القياده",
+    "total_distance": "اجمال المسافه",
+    "km": "كيلو متر",
+    "connection_failed_to": "فشل الاتصال ب",
+    "tried_to_connect_to": "حاولت الاتصال ب",
+    "but_failed": "لكن فشلت",
+    "reason": "السبب",
+    "do_you_want_to_proceed_anyway": "هل ترغب في الاستمرار علي اي حال ؟",
+    "test_drive": "تجربه القياده",
+    "continue": "استمرار",
+    "finish": "النهايه",
+    "drive_finish": "انقر هنا لإنهاء",
+    "exit_test_drive_title_first_line": "هل أنت متأكد من أنك تريد الخروج من اختبار القيادة؟",
+    "exit_test_drive_title_second_line": "فقط اضغط على موافق عند اكتمال الاختبار.",
+    "exit_test_drive_subtitle": "في حالة التوقف المؤقت ، اضغط على \"إلغاء\" للعودة إلى الشاشة السابقة"
+  },
+  "vehicle_health_check": {
+    "upload_photos": "تحميل الصور"
+  },
+  "vehicle_registration": {
+    "scanning_bluetooth_devices": "جارٍي بحث عن أجهزة البلوتوث .",
+    "no_bluetooth_device_found": "لا توجد  أجهزة البلوتوث",
+    "anonymous_device": "جهاز مجهول",
+    "activate_the_bluetooth_add_on_status_in_the_bluetooth_setting": "قم بتنشيط حالة إضافة البلوتوث في إعدادات البلوتوث الخاصة بالسيارة. عندما تكون مستعدًا ، اضغط على موافق."
+  },
+  "UPLOAD_DATA_LOADING": "تحميل ...",
+  "drive_shooting": {
+    "total_mileage": "مجموع الأميال",
+    "highlight_and_shoot": "تسليط الضوء واطلاق النار",
+    "should_take_a_photo_with_landscape_mode": "يجب أن تأخذ صورة مع وضع أفقي",
+    "please_take_a_picture_of_the_front_of_the_vehicle": "من فضلك التقط صوره من امام السياره",
+    "please_take_a_picture_of_the_side_of_the_vehicle": "من فضلك التقط صوره من جانب السياره",
+    "please_make_sure_the_license_plate_is_clearly_visible": "(يرجى التأكد من أن لوحة الترخيص مرئية بوضوح",
+    "please_take_a_picture_so_that_the_decal_looks_good": "يرجى التقاط صورة بحيث تبدو الشارات جيدة"
+  },
+  "bluetooth": {
+    "turn_on_bluetooth": "يرجى تشغيل البلوتوث للمتابعة"
+  }
+}

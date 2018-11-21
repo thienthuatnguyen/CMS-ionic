@@ -1,0 +1,60 @@
+<!--
+  Generated template for the TestDriveRecordPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton *navbar class="head-nav-bar">
+    <button end ion-button menuToggle>
+      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+    </button>
+    <ion-title class="header-title">{{ 'TESTDRIVERECORD_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="vehicle-title">
+    {{item.vehicleDisplayName}}
+  </div>
+  <div class="driving-record">
+    <div class="driving-indicator">
+
+      <div>
+        <div class="driving-control-meter" [ngClass]="{'recording': isTestDriving, 'paused': !isTestDriving}">
+          <div class="cover">
+            <p class="control-status">{{ (isTestDriving ? 'test_drive.driving' : 'test_drive.paused') | translate }}</p>
+            <p class="record-time">{{displayDrivenDurationInSec}}</p>
+            <p class="record-distance">{{drivenMileage|number:'1.1-1'}}<span>{{'KM_MILE' | translate}}</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="driving-control-button">
+        <div class="control-end">
+          <button ion-button clear (click)="endTestDrive()" [class.control-end-disable]="!isTestDriving" [disabled]="!isTestDriving">{{ 'test_drive.end' | translate }}</button>
+        </div>
+        <div [ngClass]="{'control-pause': isTestDriving, 'control-play': !isTestDriving}">
+          <button ion-button clear (click)="togglePlayButton()">
+            <ion-icon [name]="playButtonIcon"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="travel-route" *ngIf="startAddress">
+      <ion-card>
+        <div class="travel-start">
+          <p class="text-row">
+            <ion-icon name="icon_location"></ion-icon>
+            <span class="course-message">
+              {{ 'test_drive.the_vehicle_departed_at' | translate }} <em>{{startAddress}}</em>
+            </span>
+          </p>
+        </div>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

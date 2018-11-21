@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+            <ion-icon name="md-close"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title class="header-title">{{ 'document.terms_of_service' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="term-of-service-content">{{content}}</ion-content>

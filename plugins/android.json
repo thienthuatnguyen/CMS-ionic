@@ -1,0 +1,97 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-email-composer": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "sentry-cordova": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-bluetooth-serial": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-ble-central": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-insomnia": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-document-viewer": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-mauron85-background-geolocation": {
+      "GOOGLE_PLAY_SERVICES_VERSION": "11+",
+      "ANDROID_SUPPORT_LIBRARY_VERSION": "23+",
+      "ICON": "@mipmap/icon",
+      "SMALL_ICON": "@mipmap/icon",
+      "ACCOUNT_NAME": "@string/app_name",
+      "ACCOUNT_LABEL": "@string/app_name",
+      "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
+      "CONTENT_AUTHORITY": "$PACKAGE_NAME",
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-request-location-accuracy": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-open-native-settings": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-plugin-android-update": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-appversion": {
+      "PACKAGE_NAME": "kr.inventis.smarttestdrive"
+    }
+  }
+}

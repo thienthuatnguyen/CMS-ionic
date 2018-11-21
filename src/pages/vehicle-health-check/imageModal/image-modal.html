@@ -1,0 +1,32 @@
+<div class="modal-container">
+    <div class="modal-header">
+        <ion-header>
+            <ion-navbar class="head-nav-bar">
+              <ion-title class="header-title">{{ 'PHOTO' | translate }}</ion-title>
+            </ion-navbar>
+        </ion-header>
+    </div>
+    <div class="modal-content">
+        <ion-grid class="image-model-content-grid">
+            <ion-row class="image-model-content-row">
+                <ion-col text-center>
+                    <img class="image-model-pic" [src]="domSanitizer.bypassSecurityTrustUrl(pictureUrl)" />
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div class="modal-bottom">
+        <ion-grid >
+            <ion-row >
+                <ion-col >
+                    <button full ion-button color="light" (click)= "dismiss()">{{ 'CLOSE_BUTTON' | translate }}</button>
+                </ion-col>
+                <ion-col >
+                    <button full ion-button  (click)= "delete()">{{ 'DELETE_BUTTON' | translate }}</button>   
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</div>
+
+

@@ -1,0 +1,34 @@
+<ion-content>
+
+    <button ion-button (click)="blue()">
+        LE Scan
+    </button>
+    <button ion-button (click)="serialScan()">
+        Serial Scan
+    </button>
+    <button ion-button (click)="connect()">
+        Connect
+    </button>
+    <button ion-button (click)="startGeo()">
+        Start Geo
+    </button>
+    <button ion-button (click)="getVehicle()">
+        Get Vehicle
+    </button>
+
+    <div *ngFor="let d of devices" (click)="connect(d.id)">
+        <div>
+            id: {{d.id}}
+        </div>
+        <div>
+            name: {{d.name}}
+        </div>
+        <div>
+            address: {{d.address}}
+        </div>
+    </div>
+
+    <br>
+    <h4>Driven Distance</h4>
+    <div>{{drivenMileage}}</div>
+</ion-content>

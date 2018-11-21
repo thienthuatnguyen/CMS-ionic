@@ -1,0 +1,40 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+drive-shooting { 
+	.icon_h { font-family:'sampleIcon'; font-size:24px; font-style: normal; }
+
+	.content { background-color: $color-hd-lightsand; 
+		.scroll-content {
+			>div { @include left-top(0, 55px); width: 100%; height: 25%; padding: 0 $content-padding;
+				p { letter-spacing: -0.5px; }
+				@media (max-width:900px) and (orientation:landscape) { 
+					top: 0;
+					p { margin-bottom: 10px; }
+				}
+			}
+			.title { font-family: $font-head-r; font-size: $font-size-xl; color: black; }
+		}
+	}
+
+	.profile-Picture { @include position-full(55px, 0px, 0px, 0px); display: flex; flex-direction: column; 
+		&.grid { padding: 0; 
+			>.row { flex: 1; flex-direction: column; 
+				>div { display: flex; width: 100%; justify-content: center; }
+				img { margin: 0 36px; min-height: 160px;
+					@media (max-width:900px) and (orientation:landscape) { 
+						margin-top: 36px; 
+					}
+				}
+				>p { margin-bottom: 0; color: $color-hd-activeblue; }
+			}
+			>.grid { flex: 0 0 auto; margin: 0; 
+				>.row {
+					>.col { padding: 0 5px; 
+						.button { margin: 0; box-shadow: none; height: 55px; }
+					}
+				}
+			}
+		}
+	}
+}

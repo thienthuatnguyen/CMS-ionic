@@ -1,0 +1,161 @@
+<!--
+  Generated template for the DocumentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="head-nav-bar">
+    <button type="button" end ion-button menuToggle>
+      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+    </button>
+    <ion-title class="header-title">{{'DOCUMENT_TITLE' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <form #form="ngForm" (ngSubmit)="save(form)" validate>
+    <h3>{{ 'document.tap_here_to_capture_drivers_license' | translate }}</h3>
+    <ivt-camera [frontPictures]="frontPictures" [backPictures]="backPictures" [noSpashScreen]="true"></ivt-camera>
+    <!-- <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card text-center>
+            <div *ngIf="photos_front[0]==undefined" (click)="takePic(photos_front)" class="camera-front">
+              <ion-card-header>
+                <ion-icon name="icon_camera"></ion-icon>
+              </ion-card-header>
+              <ion-card-content>
+                Front side
+              </ion-card-content>
+            </div>
+            <div *ngIf="photos_front[0]!=undefined">
+              <div *ngFor="let photo of photos_front; let id = index" class="releative" (click)="deletePhoto(id, photos_front)">
+                <img [src]="domSanitizer.bypassSecurityTrustUrl(photo)" *ngIf="photo" />
+              </div>
+            </div>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card text-center>
+            <div *ngIf="photos_back[0]==undefined" (click)="takePic(photos_back)" class="camera-side">
+              <ion-card-header>
+                <ion-icon name="icon_camera"></ion-icon>
+              </ion-card-header>
+              <ion-card-content>
+                Back side
+              </ion-card-content>
+            </div>
+            <div *ngIf="photos_back[0]!=undefined">
+              <div *ngFor="let photo of photos_back; let id = index" class="releative" (click)="deletePhoto(id, photos_back)">
+                <img [src]="domSanitizer.bypassSecurityTrustUrl(photo)" *ngIf="photo" />
+              </div>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid> -->
+
+    <h3>{{ 'document.customer_infomation' | translate }}</h3>
+    <ion-item>
+      <ion-label stacked>{{ 'document.gender' | translate }} *</ion-label>
+      <ion-select  cancelText="{{ 'CANCEL_BUTTON' | translate }}" okText="{{ 'OK_BUTTON' | translate }}" required name="salutation" [(ngModel)]="item.customerSalutationEnum">
+        <ion-option *ngFor="let salutation of salutationEnum" value="{{salutation.value}}">{{salutation.name | translate}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>{{ 'document.name' | translate }} *</ion-label>
+      <ion-input name="customerName" required [(ngModel)]="item.customerFullName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>{{ 'document.phone_no' | translate }} *</ion-label>
+      <ion-input name="phoneNo" required [(ngModel)]="item.customerPhoneNumber"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>{{ 'document.email' | translate }}</ion-label>
+      <ion-input name="email" [(ngModel)]="item.customerEmailAddress"></ion-input>
+    </ion-item>
+
+    <h3>{{ 'document.test_vehicle' | translate }}</h3>
+    <ion-item>
+      <ion-input readonly name="vehicleName" placeholder="{{ 'SELECT_A_VEHICLE' | translate }}" [(ngModel)]="item.vehicleDisplayName"></ion-input>
+    </ion-item>
+
+    <h3>{{ 'document.terms_of_service' | translate }}</h3>
+    <ion-item>
+      <ion-textarea rows="4" name="termCondition" readonly [(ngModel)] ="termAndCondition" (click)="showTerms(termAndCondition)"></ion-textarea>
+    </ion-item>
+    <ion-grid class="terms">
+      <ion-row>
+        <ion-col col-1>
+          <ion-checkbox name="isArgee" required [(ngModel)]="item.isAgreedWithPrivacyPolicy"></ion-checkbox>
+        </ion-col>
+        <ion-col>
+            (*){{ 'document.term_agree_1' | translate }}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+
+        <ion-col col-1>
+          <ion-checkbox name="agrreEmail" [(ngModel)]="item.isAgreedWithEmailMarketing"></ion-checkbox>
+        </ion-col>
+        <ion-col>
+            {{ 'document.term_agree_2' | translate }}
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <h3>{{ 'document.signature' | translate }} (*)</h3>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card class="signature">
+            <ion-card-header>
+              <ion-item>
+                <span item-left>{{ 'document.customer_signature' | translate }}</span>
+                <ion-icon *ngIf="!item.customerSignatureId" (click)="clearPad('customer')" item-end name="refresh" md="ios-refresh"></ion-icon>
+              </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-input name="customerSign" [(ngModel)]= "documentObj.customerUrlBlob" hidden required></ion-input>
+              <img *ngIf="item.customerSignatureId" [src]="domSanitizer.bypassSecurityTrustUrl(customerUrl)"/>
+              <signature-pad *ngIf="!item.customerSignatureId" #customerSignPad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete('customer')"></signature-pad>
+            </ion-card-content>
+          </ion-card>
+          <p text-right *ngIf="customerSignedTime">{{ 'document.date_signed' | translate }}:{{customerSignedTime | date: displayDateFormat}}</p>
+        </ion-col>
+
+        <ion-col>
+          <ion-card class="signature">
+            <ion-card-header>
+              <ion-item>
+                <span item-left>{{ 'document.sales_consultants_signature' | translate }}</span>
+                <ion-icon *ngIf="!item.consultantSignatureId" item-end (click)="clearPad('consultant')" name="refresh" md="ios-refresh"></ion-icon>
+              </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-input name="consultantSign" [(ngModel)]= "documentObj.consultantUrlBlob" hidden required></ion-input>
+              <img *ngIf="item.consultantSignatureId" [src]="domSanitizer.bypassSecurityTrustUrl(consultantUrl)"/>
+              <signature-pad  *ngIf="!item.consultantSignatureId" #consultantSignPad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete('consultant')"></signature-pad>
+            </ion-card-content>
+          </ion-card>
+          <p text-right *ngIf="consultantSignedTime">{{ 'document.date_signed' | translate }}: {{consultantSignedTime | date: displayDateFormat}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="default-button-group">
+      <ion-row>
+        <ion-col>
+          <button type="button" ion-button full color="light" (click)="cancel()">{{ 'CANCEL_BUTTON' | translate }}</button>
+        </ion-col>
+        <ion-col>
+          <button type="submit" [disabled]="!form.valid || isDoneReservation()" ion-button full>{{ 'SAVE_BUTTON' | translate }}</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   </form> 
+</ion-content>

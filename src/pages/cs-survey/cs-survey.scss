@@ -1,0 +1,56 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+page-cs-survey { 
+	.list { padding-top: 10px;
+		.item, .item-ios, .item-md { padding-left: $content-padding; padding-right: $content-padding; 
+			//ion-icon[item-end] { margin-left: 4px; margin-right: 4px; }
+		}
+		h2 { font-family: $font-text-m; font-size: $font-size-sm; font-weight: normal; @include text-overflow(); }
+		h3 { @include text-overflow(); }
+		p { margin-top: 10px; color: $color-grey-basic; @include text-overflow(); } 
+	}
+	.list-ios > .item-block:first-child { border-top-color: transparent; }
+}
+
+.item-md, .item-ios { 
+	&.item-block .item-inner { padding-left: 0; padding-right: 0; }
+}
+.label { 
+    &-md { 
+    	h2, h3 { margin-top: 0; }
+    	p { margin-bottom: 0; }
+    }
+}
+.survey-vote {
+	.list-header { margin-bottom: 0; padding: 0 $content-padding; background-color: $color-hd-lightsand; min-height: 48px;
+		&-ios { border-bottom-width: 0; }
+		.label { 
+			&-md, &-ios { margin-top: 14px; }
+			span { letter-spacing: -0.2px;
+				&:first-child { font-family: $font-text-r; font-size: $font-size-xxs; color: $color-grey-basic; } 
+				&:last-child { display: block; font-family: $font-text-m; font-size: $font-size-sm; font-weight: normal; @include text-overflow(); } 
+			}
+		}
+		~ .item { padding-left: $content-padding; padding-right: $content-padding;
+			.input-wrapper { min-width: 110px; 
+				p { color: $color-grey-dark; } 
+			}
+			.label-md, .label-ios { margin-right: 0; }
+			.rating { padding-left: 20px;
+				@media (max-width:350px) { padding-left: 0px; } 
+				li { padding: 5px 5px 5px 8px; }
+				@include rtl() { padding-left: 0px; padding-right: 0; }
+			}
+		}
+	}
+	.default-button-group { padding-left: 15px; padding-right: 15px; }
+}
+
+ivt-survey-page { 
+	.hideButtonBack {
+		.back-button {
+			display: none !important;
+		}
+	}
+}

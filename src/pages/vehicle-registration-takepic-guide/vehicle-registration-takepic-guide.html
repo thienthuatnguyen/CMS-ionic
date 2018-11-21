@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{'vehicle.photo_upload.title' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--<img src=""-->
+  <div text-center>
+      <div>
+          {{ 'vehicle.photo_upload.guide.' + (isFront? 'front': 'rear') + '.line1' | translate }}
+      </div>
+      <div>
+          {{ 'vehicle.photo_upload.guide.' + (isFront? 'front': 'rear') + '.line2' | translate }}
+      </div>
+  </div>
+  <div>
+    <img src="assets/img/car1.png"/>
+  </div>
+  <div text-center>
+    <button ion-button>{{ 'BEGIN_SHOOTING_BUTTON'  | translate}}</button>
+  </div>
+</ion-content>

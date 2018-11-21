@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar class="head-nav-bar">
+    <button start (click)= "clearLog()">
+        <ion-icon name="trash"></ion-icon>
+    </button>
+    <button end ion-button menuToggle>
+      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+    </button>
+    <ion-title class="header-title">Developer site</ion-title>
+   
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-searchbar [(ngModel)] = "txt" (ionInput)="searchByKeyWord($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+  <h1 text-center>This is all log of page</h1>
+  <ion-list>
+    <ion-item *ngFor="let item of array ">{{item}}</ion-item>
+  </ion-list>
+</ion-content>

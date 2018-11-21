@@ -1,0 +1,26 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+page-search {
+	.icon_h { font-family:'sampleIcon'; font-size:24px; font-style: normal; }
+	.datetime-ios, .datetime-md { padding: 9px 8px 9px 6px; 
+	  &:after { display: block; @extend .icon_h; content:'\0041'; font-size: 2.0rem; color: $color-icon; }
+	}
+	.scroll-content { padding: $content-padding-s; }
+	.select-schedule { margin-top: 30px; @include border-box(); 
+		button, .button { margin: 2px 0; padding: 0; height: 36px; /*background-color: $color-hd-skyblue;*/ color: $color-hd-blue; font-family: $font-text-r; font-size: $font-size-sm; letter-spacing: -0.7px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.1); background-image: linear-gradient(0deg, #ECECEC, #f4f4f4);
+			&[disabled], &[ion-button][disabled] { background-image: inherit; background-color: $color-grey-basic; color: #000; box-shadow: none; border-radius: 2px; }
+			&.selected { background-image: inherit; background-color: $color-hd-activeblue; color: white; box-shadow: inset 2px 2px 2px 0 rgba(0, 0, 0, 0.3), inset 0px 3px 6px 0 rgba(0, 0, 0, 0.1); border-radius: 2px;
+				span {
+					&:before { margin-right: 2px; display: inline-block; content: "\f3ff"; font-size: 1.8em; font-family: "Ionicons"; font-style: normal; font-weight: normal; line-height: 1; 
+                		@include rtl() { margin-left: 3px; margin-right: 0px; /*transform: scaleX(-1);*/ }
+                	}
+				}
+			}
+		}
+		.sign { @include right-top(8px, 1px); display: inline-block; line-height: 1; }
+		.private-sign, .vehicle-sign { display: inline-block; @include circle(16px); line-height: 16px; background-color: #666; vertical-align: middle;
+			&:before { display: block; font-size: 1.2rem; color: white; text-align: center; }
+		}
+	}
+}

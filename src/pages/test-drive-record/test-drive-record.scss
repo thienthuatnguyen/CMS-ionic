@@ -1,0 +1,97 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+page-test-drive-record {
+	.scroll-content { background-color: black; }
+	.vehicle-title { position: relative; padding: 0 $content-padding; height: 48px; font-family: $font-head-b; font-size: $font-size-sm; background-color: $color-grey-dark; color: white; display: flex; flex-wrap: wrap; align-items: center; z-index: 1;
+		@media (max-width:767px) and (orientation:landscape) { display: none; }
+		@media (max-width:820px) and (orientation:landscape) { display: none; }
+	}
+	.driving-record { @include position-full(48px, 0px, 0px, 0px); -webkit-box-direction: normal; display: flex; -webkit-box-orient: vertical; flex-direction: column;
+			&:before { @include position-fix(); content: ""; background: url('../assets/img/drive-bg.jpg') no-repeat center; background-size: cover; opacity: .6; }
+		.driving-indicator { position: relative; flex: 1; display: flex; flex-wrap: wrap; align-content: center; align-items: center; justify-content: center; flex-direction: column; min-height: 260px; z-index: 1; }
+		.travel-route { flex: 0 0 auto; z-index: 1;
+      .card { background-color: rgba(255,255,255,.85); }
+    }
+		@media (max-width:767px) and (orientation:landscape) { top: 0; }
+		@media (max-width:820px) and (orientation:landscape) { top: 0; }
+	}
+	.driving-control-meter { @include circle(230px); @include center-block(); background-color: transparent; border: 10px solid white;
+		&.recording { box-shadow: 0 0 30px 5px rgba(0,255,245,.6), 0 3px 10px rgba(0,255,245,.35);
+			.control-status {
+				animation: mc 1.5s infinite;
+				@keyframes mc { 0% {color: rgba(255,255,255,.6);} 50% {color: rgba(255,255,255,0);} 100% {color: rgba(255,255,255,1);}
+				}
+			}
+		}
+		&.paused { border-color: rgba(255,255,255,.5); }
+		.cover { display: flex; flex-wrap: wrap; align-content: space-around; align-items: center; @include circle(210px); background-color: rgba(0,44,95,.5); justify-content: center; }
+		p { margin: 0; text-align: center; flex: 1 1 100%; }
+		.control-status { margin-top: 15px; font-size: 1.8rem; color: rgba(255,255,255,.6); }
+		.record-time { margin: -15px 0 -20px; font-family: $font-text-m; font-size: 4.0rem; color: white; }
+		.record-distance { margin-bottom: 20px; font-family: $font-text-b; font-size: 2.4rem; color: rgba(255,255,255,.7);
+			span { padding-left: 3px; font-size: $font-size-sm; }
+		}
+
+    @media (min-width:768px) { @include circle(360px);
+      .cover { @include circle(340px); }
+      .control-status { font-size: 2.4rem; }
+      .record-time { margin: -30px 0 -40px; font-size: 6.0rem; }
+      .record-distance { font-size: 4.0rem; }
+    }
+    @media (max-width:820px) and (orientation:landscape) { @include circle(230px);
+      .cover { @include circle(210px); }
+      .control-status { font-size: 1.8rem; }
+      .record-time { margin: -30px 0 -40px; font-size: 4.0rem; }
+      .record-distance { font-size: 2.4rem; }
+    }
+  }
+  .driving-control-button { position: relative; margin-top: 15px; width: 60px; height: 60px;
+    button, .button { margin: 0; @include circle(60px); border: 3px solid white; background-color: $color-hd-blue; color: white; font-family: $font-text-b; font-size: 1.6rem; font-weight: normal; }
+    > div { position: absolute; left: 0; top: 0; display: inline-block; }
+    .control-end { left: -6px;
+      button, .button { @include circle(72px); font-size: 1.8rem; }
+      //.control-end-disable { }
+    }
+    .control-pause { left: 90px; top: -28px;
+      .icon, .icon-md { font-size: 1.4em; }
+      .icon-ios { font-size: 1.6em; }
+    }
+    .control-play { left: 90px; top: -28px;
+      .icon, .icon-md { margin-left: 4px; font-size: 1.4em; }
+      .icon-ios { margin-left: 4px; font-size: 1.6em; }
+    }
+
+    @media (min-width:768px) { width: 90px; height: 90px; 
+      button, .button { @include circle(90px); font-size: 2.0rem; }
+      .control-end { @include position(null, null, null, -5px);
+        button, .button { @include circle(100px); font-size: 2.4rem; }
+      }
+      .control-pause, .control-play { @include position(null, null, null, 110px); }
+    }
+    @media (max-width:820px) and (orientation:landscape) {  
+      @include margin(60px, -120px, null, null);
+      button, .button { @include circle(60px); font-size: 1.6rem;}
+      .control-end { @include position(50px, null, null, -30px);
+        button, .button { @include circle(72px); font-size: 2.0rem; }
+      }
+      .control-pause, .control-play { @include position(-30px, null, null, 0px); }
+    }
+  }
+  .travel-route {
+    .card { margin: 12px 15px; width: auto; border-radius: 0;
+      > div { padding: 8px; display: flex; flex-wrap: wrap; align-content: space-around; align-items: center; }
+    }
+    .travel-start { padding-left: 15px !important; min-height: 72px; }
+    .text-row { margin: 4px 0; padding-left: 15px; flex: 1 1 100%; color: $color-grey-dark;
+      .icon { margin-left: -20px; vertical-align:: middle;
+        &:before { display: inline-block; font-size: inherit; vertical-align: middle; }
+        @include rtl() { margin-left: 0; margin-right: -20px; }
+      }
+      @include rtl() { padding-right: 15px; }
+    }
+    .course-message {
+      em { font-style: normal; color: $color-hd-blue; }
+    }
+  }
+}

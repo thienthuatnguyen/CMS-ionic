@@ -1,0 +1,39 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+page-test-drive-ready {
+  [padding] h2:first-child { margin-top: 30px; 
+    @media (max-width:900px) and (orientation:landscape) { margin-top: -0.3rem; }
+  }
+	h2 { padding: 20px 0 10px; font-family: $font-head-m; font-size: $font-size-md; font-weight: normal; }
+	.bluetooth { margin-bottom: 16px;
+		.icon:before { margin-right: 5px; @include circle(26px); background-color: $color-hd-sand; display: flex; align-items: center; justify-content: center; }
+		span { font-family: $font-text-r; font-size: $font-size-sm; color: $color-hd-activeblue; }
+	}
+	.current-car { background-color: white;
+		.car-image { position: relative; height: 190px; overflow: hidden; background-color: black;
+      &:after { display: flex; align-items: center; justify-content: center; content: "\f103"; width: 100%; height: calc(100% - 30px); font-family: "Ionicons"; font-size: 52px; color: $color-grey-basic; background-color: #e0e0e0; }
+			img { @include position-full(); display: block; margin: auto; max-width: 100%; width: auto; height: auto; text-align: center; }
+			.grid { @include left-bottom(); padding: 1px 5px; height: 30px; background-color: rgba(0,0,0,.5); color: white; }
+			.col { @include text-overflow();
+				&:first-child { font-family: $font-text-m; }
+			}
+
+      @media (min-width:380px) { height: 214px; }
+      @media (max-width:380px) { height: 190px; }
+      @media (max-width:360px) { height: 180px; }
+      @media (max-width:350px) { height: 160px; }
+    }
+    .user-info { padding: 5px 10px;
+      .row { padding: 0; }
+      .icon { font-size: 1.2rem;
+        &:before { font-size: 1.6rem; }
+      }
+    }
+  }
+  .return-button {
+    .ion-ios-undo, .ion-md-undo { margin-right: 5px; 
+      @include rtl() { margin-left: 5px; margin-right: 0px; transform: scaleX(-1); }
+    }
+  }
+}

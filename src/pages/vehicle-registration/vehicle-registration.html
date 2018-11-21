@@ -1,0 +1,82 @@
+<!--
+  Generated template for the VehicleRegistrationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="head-nav-bar">
+    <button end ion-button menuToggle>
+      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+    </button>
+    <ion-title class="header-title">{{ 'VEHICLE_REGISTRATION_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="save()" validate>
+    <ion-list>
+      
+      <ion-item>
+        <ion-label stacked>{{ 'VEHICLE_MODEL' | translate }}</ion-label>
+        <ion-select required name="vehicleType" cancelText="{{ 'CANCEL_BUTTON' | translate }}" okText="{{ 'OK_BUTTON' | translate }}" placeholder="{{ 'SELECT_A_VEHICLE_MODEL' | translate }}" [(ngModel)]="vehicle.vehicleType" (ngModelChange)="changeVehicleType($event)">
+          <ion-option *ngFor="let type of vehicleTypeSegments" [value]="type">{{type.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item (click)="checkVehicleTypeValid()">
+        <ion-label stacked>{{ 'MODEL_YEAR' | translate }}</ion-label>
+        <ion-select [disabled]="!vehicle.vehicleType" required name="year" cancelText="{{ 'CANCEL_BUTTON' | translate }}" okText="{{ 'OK_BUTTON' | translate }}" placeholder="{{ 'SELECT_A_YEAR' | translate }}" [(ngModel)]="vehicle.modelYear" (ngModelChange)="changeModelYear($event)">
+          <ion-option *ngFor="let item of modelYearSegments" [value]="item">{{item.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item (click)="checkYearValid()">
+        <ion-label stacked>{{ 'TRIM' | translate }}</ion-label>
+        <ion-select [disabled]="!vehicle.modelYear" required name="trim" cancelText="{{ 'CANCEL_BUTTON' | translate }}" okText="{{ 'OK_BUTTON' | translate }}" placeholder="{{ 'SELECT_A_TRIM' | translate }}" [(ngModel)]="vehicle.trim">
+          <ion-option *ngFor="let item of trimSegments" [value]="item">{{item.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>{{ 'PLATE_NUMBER' | translate }}</ion-label>
+        <ion-input required name="plateNo" [(ngModel)]="vehicle.plateNo"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label stacked>{{ 'INITIAL_OPERATING_DISTANCE' | translate }}</ion-label>
+        <ion-input required name="initialOperatingDistance" type="number" [(ngModel)]="vehicle.initialMileage"></ion-input>
+      </ion-item>
+
+      <ivt-camera [(frontPictures)]="frontPictures" [(backPictures)]="backPictures"></ivt-camera>
+
+      <ion-item class="search-bluetooth">
+          <ion-label stacked>{{ 'SELECT_VEHICLE_BLUETOOTH' | translate }} <button type="button" ion-button (click)="searchBluetooth()" >{{ 'SEARCH_BUTTON' | translate }}</button></ion-label>
+      </ion-item>      
+      
+      <ion-item>
+          <ion-label stacked style="display: none;">{{ 'SELECT_VEHICLE_BLUETOOTH' | translate }}</ion-label>
+          <ion-select required name="vehicleSelect" cancelText="{{ 'CANCEL_BUTTON' | translate }}" okText="{{ 'OK_BUTTON' | translate }}" placeholder="{{ 'SELECT_A_BLUETOOTH_AUDIO_DEVICE_INSTALLED_ON_THE_VEHICLE' | translate }}" [(ngModel)]="vehicle.pairedDevice">
+            <ion-option [value]="dummyDevice">{{ ('vehicle_registration.' + dummyDevice.name) | translate }}</ion-option>
+            <ion-option *ngFor="let device of devices" [value]="device">{{ (device.name || device.address) }}</ion-option>
+          </ion-select>
+      </ion-item>
+    </ion-list>
+
+    
+
+    <ion-grid class="default-button-group">
+      <ion-row>
+        <ion-col>
+          <button type="button" ion-button full color="light" (click)="cancelTab()">{{ 'CANCEL_BUTTON' | translate }}</button>
+        </ion-col>
+        <ion-col>
+          <button type="submit"  ion-button full [disabled]="!form.valid || !vehicle.pairedDevice.id || frontPictures.length == 0 || backPictures.length == 0 ">{{ 'SAVE_BUTTON' | translate }}</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

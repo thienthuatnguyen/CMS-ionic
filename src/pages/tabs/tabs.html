@@ -1,0 +1,6 @@
+<ion-tabs class="bottom-menu-bar" [selectedIndex]="seltabix" (ionChange)="openPage($event)">
+  <ion-tab [root]="tab1Root" tabTitle="{{'tabs_page.tab1.title' | translate}}" tabIcon="icon_home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="{{'tabs_page.tab2.title' | translate}}" tabIcon="icon_cal_checklist"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="{{'tabs_page.tab3.title' | translate}}" tabIcon="icon_guage"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="{{'tabs_page.tab4.title' | translate}}" tabIcon="icon_survey"></ion-tab>
+</ion-tabs>

@@ -1,0 +1,32 @@
+/* Hyundai fonts
+---------------------------------------------------------------------------- */
+$Hyundai-font-path: $font-path !default;
+
+@font-face {
+	font-family: "HyundaiSansHead-Bold";
+	src: url("#{$Hyundai-font-path}/HyundaiSansHead-Bold.woff") format("woff");
+}
+@font-face {
+	font-family: "HyundaiSansHead-Medium";
+	src: url("#{$Hyundai-font-path}/HyundaiSansHead-Medium.woff") format("woff");
+}
+@font-face {
+	font-family: "HyundaiSansHead-Regular";
+	src: url("#{$Hyundai-font-path}/HyundaiSansHead-Regular.woff") format("woff");
+}
+@font-face {
+	font-family: "HyundaiSansHead-Light";
+	src: url("#{$Hyundai-font-path}/HyundaiSansHead-Light.woff") format("woff");
+}
+@font-face {
+	font-family: "HyundaiSansText-Bold";
+	src: url("#{$Hyundai-font-path}/HyundaiSansText-Bold.woff") format("woff");
+}
+@font-face {
+	font-family: "HyundaiSansText-Medium";
+	src: url("#{$Hyundai-font-path}/HyundaiSansText-Medium.woff") format("woff");
+}
+@font-face {
+	font-family: "HyundaiSansText-Regular";
+	src: url("#{$Hyundai-font-path}/HyundaiSansText-Regular.woff") format("woff");
+}

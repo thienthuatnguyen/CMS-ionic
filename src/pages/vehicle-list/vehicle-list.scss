@@ -1,0 +1,58 @@
+@import "../../assets/css/_variables";
+@import "../../assets/css/utilities";
+
+page-vehicle-list {
+	.list { 
+		.item, .item-ios, .item-md { padding-left: $content-padding; padding-right: $content-padding; }
+		h2 { font-family: $font-text-m; font-size: $font-size-sm; font-weight: normal; }
+		p { margin-top: 10px; } 
+	}
+	.list-ios > .item-block:first-child { border-top-color: transparent; }
+
+	.label { 
+	    &-md { margin: 10px 8px 10px 0; 
+	    	h2, h3 { margin-top: 0; }
+	    }
+	    &-ios { margin: 10px 8px 10px 0; 
+	    }
+	    &-ios, &-md {
+	    	p { margin-top: 0; margin-bottom: 0; @include text-overflow();
+				&:nth-child(1) { margin-bottom: 2px; font-family: $font-text-m; font-size: $font-size-sm; color: #000; }
+				&:nth-child(2) { margin-bottom: 3px; font-size: $font-size-xs; }
+				&:nth-child(3) { margin-top: 10px; font-size: $font-size-xs; color: $color-grey-basic; }
+	    	}
+	    }
+		.icon { 
+			&:before { font-size:$font-size-xs; }
+			+ span { color: $color-grey-basic; }
+		}
+	}
+
+	.list-header { margin-bottom: 0; background-color: $color-hd-lightsand; min-height: 48px;
+		&-ios { border-bottom-width: 0; }
+		.label { 
+			&-md, &-ios { margin-top: 14px; }
+			span { letter-spacing: -0.2px;
+				&:first-child { font-family: $font-text-r; font-size: $font-size-xxs; color: $color-grey-basic; } 
+				&:last-child { font-family: $font-text-m; font-size: $font-size-sm; font-weight: normal; } 
+			}
+		}
+		.icon { font-family: $font-text-m;
+			&:before { font-size:$font-size-sm; }
+			+ span { font-size:$font-size-sm; text-transform: initial; }
+		}
+		~ .item { 
+			.input-wrapper { min-width: 100px; 
+				p { color: $color-grey-dark; 
+				} 
+			}
+		}
+	}
+	.vhc-status {
+		span { display: block; padding: 6px 8px; min-width: 90px; border-radius: 2px; font-family: $font-text-m; font-size: 1.3rem; color: white; text-align: center;
+			&.onload { background-color: $vhc-status-red; letter-spacing: -0.5px; } 
+			&.waiting { background-color: $vhc-status-orange; } 
+			&.repair { background-color: $vhc-status-green; } 
+		}
+	}
+}

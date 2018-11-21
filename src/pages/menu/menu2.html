@@ -1,0 +1,98 @@
+<ion-header>
+
+  <!--메인(첫) 화면-->
+    <ion-buttons align-items-center (click)="addItem()">
+      <button ion-button icon-only>
+        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <button align-items-center ion-button (click)="addItem()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 style="background-color: gray">
+        <p>Total Vehicles</p>
+        <p>5</p>
+      </ion-col>
+
+      <ion-col col-4 style="background-color: gray">
+        <p>On the Road</p>
+        <p>1</p>
+
+      </ion-col>
+      <ion-col col-4 style="background-color: gray">
+        <p>Waiting</p>
+        <p>1</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--홈화면 - 카드뷰 형태의 컨텐츠-->
+
+
+  <ion-slides pager="true"  dir="rtl">
+    <ion-slide *ngFor="let slide of otrVehiclesItem">
+      <p>* Vehicle On the Road</p>
+
+      <ion-item-divider color="light"> <!--TODO 구분선 넓게 주었음. 백그라운드 컬러로 변경 필요.-->
+        <ion-card>
+
+          <img [src]="slide.image" class="slide-image"/>
+          <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+          <p [innerHTML]="slide.description"></p>
+          <p [innerHTML]="slide.location"></p>
+        </ion-card>
+      </ion-item-divider>
+
+    </ion-slide>
+
+  </ion-slides>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col start>
+        <div> * Vehicle Waiting</div>
+      </ion-col>
+      <ion-col end col-auto>
+        <div> 4</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col start>
+        <p>Vehicles</p>
+      </ion-col>
+      <ion-col end col-auto>
+        <p>Today Reservation</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img [src]="item.profilePic"/>
+        </ion-avatar>
+        <h2>{{item.name}}</h2>
+        <p>{{item.about}}</p>
+        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

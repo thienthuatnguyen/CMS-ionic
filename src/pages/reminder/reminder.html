@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar class="head-nav-bar">
+    <button end ion-button menuToggle>
+      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+    </button>
+    <ion-title class="header-title">{{ 'REMINDER_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let item of items">
+    <ion-list>
+      <ion-item>
+        {{item.name}}
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start name="icon_car"></ion-icon>
+        {{item.vehicle}}
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start name="icon_smile"></ion-icon>
+        {{item.driver}}
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start name="icon_clock"></ion-icon>
+        <span>{{item.time}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

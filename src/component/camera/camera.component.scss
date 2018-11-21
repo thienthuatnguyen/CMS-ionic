@@ -1,0 +1,26 @@
+@import "../../assets/css/_variables";
+ivt-camera {
+    .camera-front,
+    .camera-side {
+        height: 75px;
+        background-image: linear-gradient(0deg, #ECECEC, #f4f4f4);
+        color: black;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.1);
+        .button-inner {
+            >div {
+                padding: 10px;
+                >div {
+                    padding: 0px 10px 8px;
+                    &:last-child {
+                        padding: 5px 10px 0;
+                        font-family: $font-text-r;
+                        font-size: $font-size-xs;
+                    }
+                }
+            }
+        }
+        +.card-content {
+            padding-bottom: 10px;
+        }
+    }
+}

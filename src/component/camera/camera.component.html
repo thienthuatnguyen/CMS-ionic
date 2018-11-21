@@ -1,0 +1,36 @@
+<ion-row>
+    <ion-col col-6 padding>
+        <button type="button" ion-button full color="light" class="camera-front" (click)="takePhoto('front')" *ngIf="frontPictures.length == 0">
+            <div>
+                <div>
+                    <ion-icon name="icon_camera"></ion-icon>
+                </div>
+                <div>{{ 'FRONT_SIDE' | translate }}</div>
+            </div>
+        </button>
+        <ion-card text-center *ngIf="frontPictures.length > 0">
+            <div>
+                <div class="releative" (click)="deletePhoto('front')">
+                    <img [src]="domSanitizer.bypassSecurityTrustUrl(frontPictures[0].url)" />
+                </div>
+            </div>
+        </ion-card>
+    </ion-col>
+    <ion-col col-6 padding>
+        <button type="button" ion-button full color="light" class="camera-side" (click)="takePhoto('back')" *ngIf="backPictures.length == 0">
+            <div>
+                <div>
+                    <ion-icon name="icon_camera"></ion-icon>
+                </div>
+                <div>{{ 'SIDE' | translate }}</div>
+            </div>
+        </button>
+        <ion-card text-center *ngIf="backPictures.length > 0">
+            <div>
+                <div class="releative" (click)="deletePhoto('back')">
+                    <img [src]="domSanitizer.bypassSecurityTrustUrl(backPictures[0].url)" />
+                </div>
+            </div>
+        </ion-card>
+    </ion-col>
+</ion-row>

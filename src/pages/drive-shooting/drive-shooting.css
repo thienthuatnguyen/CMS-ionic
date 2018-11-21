@@ -1,0 +1,25 @@
+/* basic frame */
+/* Components */
+/* pixel size set */
+/* Leaving space for spacing of elements -Used for margin or padding */
+page-settings .icon_h, page-settings .profile-Picture ion-avatar:before { font-family: 'sampleIcon'; font-size: 24px; font-style: normal; }
+page-settings .label-md, page-settings .label-ios { margin: 16px 8px 16px 0; }
+page-settings .list-ios > .item-block:first-child { border-top-color: transparent; }
+page-settings .profile-Picture { position: relative; }
+page-settings .profile-Picture .item { width: auto !important; background-color: transparent; }
+page-settings .profile-Picture .item .label-md, page-settings .profile-Picture .item .label-ios { margin: 0; }
+page-settings .profile-Picture ion-avatar { position: relative; width: 180px; height: 180px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.6); overflow: hidden; text-align: center; }
+page-settings .profile-Picture ion-avatar img { position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; display: block; margin: auto; width: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: 0; }
+page-settings .profile-Picture ion-avatar:before { display: flex; content: '\004C'; min-height: 100%; font-size: 8.0rem; line-height: 53px; color: #7F7F7F; align-items: center; align-content: center; justify-content: center; }
+page-settings .profile-Picture > .icon { position: absolute; right: 10px; top: 10px; font-size: 3.0rem; color: #002c5f; }
+page-settings .profile-Picture > .icon:before { width: 30px; height: 30px; }
+page-settings .profile-Picture > .row { margin: -20px; padding: 40px 0; background-color: #f6f3f2; }
+page-settings .profile-Picture .default-button-group { margin-top: 40px; }
+@media (max-width: 900px) and (orientation: landscape) { page-settings .profile-Picture > .row { padding: 20px 0; }
+  page-settings .profile-Picture .default-button-group { margin-bottom: 0px; } }
+@media (max-width: 767px) and (orientation: landscape) { page-settings .profile-Picture > .row { padding: 30px 0; }
+  page-settings .profile-Picture .default-button-group { margin-bottom: 0px; } }
+@media (max-width: 667px) and (orientation: landscape) { page-settings .profile-Picture > .row { padding: 20px 0; }
+  page-settings .profile-Picture .default-button-group { margin-bottom: 0px; } }
+@media (max-width: 640px) and (orientation: landscape) { page-settings .profile-Picture > .row { padding: 10px 0; }
+  page-settings .profile-Picture .default-button-group { margin-bottom: 0px; } }

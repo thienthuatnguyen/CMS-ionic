@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar class="head-nav-bar">
+    <button end ion-button menuToggle>
+      <ion-icon name="icon_menu" class="menu-toggle"></ion-icon>
+    </button>
+    <ion-title class="header-title">{{ pageTitle }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <!-- <form *ngIf="settingsReady"> -->
+  <ion-list *ngIf="page == 'main'">
+    <ng-container *ngFor="let settingItem of settingItems">
+      <ion-item *ngIf="settingItem.type === 'toggle'">
+        <ion-label>{{ settingItem.name | translate }}</ion-label>
+        <ion-toggle [(ngModel)]="settingItem.value" (ngModelChange)="settingChanged(settingItem.name, $event)"></ion-toggle>
+      </ion-item>
+      <button ion-item [navPush]="settingItem.page" [navParams]="settingItem.params" *ngIf="settingItem.type=='navigation'">
+        {{ settingItem.name | translate }}
+      </button>
+    </ng-container>
+  </ion-list>
+  <!-- </form> -->
+</ion-content>
